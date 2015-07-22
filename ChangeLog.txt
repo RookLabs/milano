@@ -1,0 +1,5 @@
+Version 1.0.1
+Date    7/22/2015
+--------------
+- Initial open-source release
+- Updated IOCs

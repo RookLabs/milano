@@ -1,0 +1,4 @@
+*.pyc
+last_scan_results.txt
+win32/
+openioc_bundle/

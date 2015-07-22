@@ -10,7 +10,7 @@ Description:
     (link below). Our intentions are to give people a way to protect themselves. The executable was created with 
     the lowest technical user in mind and now we want to make sure we are completely transparent with how our 
     tool operates. In lieu of executing the binary the .py script on GitHub can be leveraged. We have learned a 
-    lot during our releases to include, leaving '.DS_Store' within the zip, consistent folder/file names, etc.
+    lot during our releases to include, removing '.DS_Store' from the zip, consistent folder/file names, etc.
 
     This is the first time we have released tools to the public for free. We will continue to develop, improve, 
     and grow our processes as these opportunities are identified. We truly appreciate the feedback and suggestions 

@@ -1,0 +1,69 @@
+LIMITATIONS OF LIABILITY AND INDEMNIFICATION
+
+    Rook owns the rights, title and interest in all patents, copyrights,
+    trade- secrets, trademarks in Milano software (the "Software"). By
+    downloading this software, you will obtain a limited, revocable
+    license to use the Software. The Software is and shall remain the sole
+    and exclusive property of Rook, and Rook may make any use of the
+    Software. Nothing herein shall be construed as granting You any
+    license or other right except for those rights expressly granted. You
+    shall not modify, reverse engineer, decompile, disassemble, copy or
+    otherwise reproduce the Software or permit or induce any third party
+    to do the same.
+
+    You shall indemnify, defend, and hold harmless Rook and its officers,
+    directors, shareholders, employees, representatives, agents, and
+    affiliates from all claims, demands, liabilities, losses, damages,
+    judgments or settlements, including all reasonable costs and expenses
+    related thereto including attorney's fees and court costs, directly or
+    indirectly resulting from any claim, proceeding, demand, expense, and
+    liability of any kind whatsoever resulting from the use, manufacture,
+    sale, lease, consumption, or advertisement of the Software; any
+    material breach of the terms, conditions, or provisions of this
+    Agreement. This Agreement shall be construed in accordance with, and
+    governed in all respects by Indiana law, without regard to conflicts
+    of law principles.
+
+LIMITATIONS ON WARRANTIES, LIMIT OF LIABILITY
+
+    ROOK MAKES NO REPRESENTATIONS, EXTENDS NO WARRANTIES OF ANY KIND,
+    EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION,
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUALITY, QUIET
+    ENJOYMENT, ACCURACY, COURSE OF DEALING, USAGE OR TRADE AND ROOK
+    ASSUMES NO RESPONSIBILITY WHATSOEVER WITH RESPECT TO USE, OR THE RIGHT
+    TO PRODUCE PRODUCTS MADE BY THE USE OF THE SOFTWARE UNDER THIS
+    AGREEMENT. IN NO EVENT SHALL ROOK BE LIABLE TO YOU FOR ANY INDIRECT,
+    PUNITIVE, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN
+    CONNECTION WITH THIS AGREEMENT OR YOU DOWNLOAD, INSTALLATION AND/OR
+    USE OF THE SOFTWARE, EVEN IF THE REMEDIES SET FORTH IN THIS AGREEMENT
+    FAIL OF THEIR ESSENTIAL PURPOSE.
+
+LIMITATIONS OF SOFTWARE SERVICES
+
+    This software is provided as-is.
+
+    This software is designed to detect signatures for indicators of
+    compromise ("IOCs") specifically to indicate systems compromised by
+    Hacking Team exploits. Rook Security's intelligence team conducted
+    extensive analysis on the IOCs provided in this release. The Rook team
+    conducted both dynamic and static analysis on the files included in
+    the 51 Github projects released under the "Hacked Team" moniker.
+    During post-analysis, the Rook team compared hashes of the identified
+    potentially malicious files against a number of antivirus vendors and
+    industry standard whitelists. None of the hashes identified in this
+    release were found in the whitelists searched.
+
+    This release is limited to detection within the filesystem only.
+    Registry, network, and other indicators will not be evaluated.
+
+    The application is limited to the signatures identified by Rook
+    Security at time of this release. The dynamic nature of filesystems
+    limits the files that may be scanned. Some malware may attempt
+    filesystem modification. Some malware may attempt rootkits that hide
+    detection from scanners. This software will not attempt to uncover
+    these hidden files.
+
+    This software will not attempt to remediate detected files.
+    Compromised systems may contain remnants of the attack, such as
+    registry entries. Attacks may use trojans or other methods to
+    compromise other components of the system that will not be detected.
