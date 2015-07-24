@@ -4,16 +4,15 @@ class IocReader(object):
     Filename,Category,Reference,SHA1,MD5,SHA256 = (0,1,2,3,4,5)
 
     def __init__(self, ioc_filepath):
+        self.ioc_filepath = ioc_filepath
         self.iocData = self.load_ioc_data()
-
 
     def load_ioc_data(self):
         data = []
-        reader = OpenIOC('./openioc/downloaded/openioc_1.1/ht_ioc_1-1_WithParams.ioc')
+        print self.ioc_filepath
+        reader = OpenIOC(self.ioc_filepath)
         data = reader.parse()
-        # for row in res:
-        #     data.append(row)
-        print data
+        # print data
         return data
 
 
