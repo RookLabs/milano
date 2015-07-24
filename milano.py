@@ -14,8 +14,6 @@ logger = get_logger()
 
 
 class Main(object):
-    ioc_hashes_file = 'openioc/downloaded/openioc_1.1/ht_ioc_1-1_WithParams.ioc'
-
 
     def __init__(self):
         self.parser = argparse.ArgumentParser(description='Sentinel scans for and reports the presence of malware-related and malware-modified files.')
