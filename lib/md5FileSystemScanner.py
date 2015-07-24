@@ -17,10 +17,6 @@ class Md5FileSystemScanner(object):
     def scan_file_system(self):
         results = Results()
 
-        should_deep_scan = (raw_input('Quick scan or deep scan (NOTE: quick scan is fast but incomprehensive)? [Q/d] ').lower() == 'd')
-
-        results.scan_type = 'deep' if should_deep_scan == True else 'quick'
-        
         self.fileSystemListGeneratorProvider.prompt_for_paths_to_scan()
 
         self.logger.info('')
@@ -32,7 +28,7 @@ class Md5FileSystemScanner(object):
         pathGenerator = self.fileSystemListGeneratorProvider.get_generator()
         for path in pathGenerator:
             try:
-                if self.should_scan_file(path, should_deep_scan):
+                if self.should_scan_file(path):
                     my_md5 = self.md5Generator.compute_md5(path)
                     self.logger.info('Checking path: ' + path)
                     if self.iocReader.has_md5(my_md5):
@@ -57,18 +53,11 @@ class Md5FileSystemScanner(object):
         return results
 
 
-    def should_scan_file(self, path, should_deep_scan):
+    def should_scan_file(self, path):
         if path.startswith('/proc/') or path.startswith('/run/'):
             return False
 
-        if should_deep_scan:
-            return True
-        else:
-            if (os.path.getsize(path) > (500 * 1024 * 1024)):
-                return False
-
-            filename = ntpath.basename(path).lower()
-            return filename in self.suspect_files
+        return True
 
 
 if __name__ == '__main__':

@@ -16,8 +16,6 @@ class ResultsWriter(object):
 		output = 'Scan date: ' + time.strftime("%c") + \
 			'\n' + \
 			'Scan duration (seconds): ' + str(results.scan_time_seconds) + \
-			'\n' + \
-			'Scan type: ' + results.scan_type + \
 			'\n\n' + \
 			'Files requiring review as they match Hacking Team MD5 signatures\n' + \
 			'  Category (A=Detected via VirusTotal  B=Detected via manual analysis\n' + \
@@ -28,10 +26,7 @@ class ResultsWriter(object):
 			for path in results.detected_file_paths:
 				output += path.potential_category + ': ' + path.file_path + '\n'
 		else:
-			warning = ''
-			if results.scan_type == 'quick':
-				warning = ' (you should run a deep scan for more confidence)'
-			output += 'No files found that require review{}\n'.format(warning)
+			output += 'No files found that require review\n'
 
 		return output
 
@@ -53,7 +48,6 @@ class Results(object):
 	def __init__(self):
 		self.detected_file_paths = []
 		self.scan_time_seconds = 0
-		self.scan_type = ''
 
 
 	def start(self):
