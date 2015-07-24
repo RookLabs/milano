@@ -1,4 +1,4 @@
-import csv
+from openIOC import *
 
 class IocReader(object):
     Filename,Category,Reference,SHA1,MD5,SHA256 = (0,1,2,3,4,5)
@@ -9,9 +9,11 @@ class IocReader(object):
 
     def load_ioc_data(self):
         data = []
-        reader = csv.reader(open('./ioc_data.csv', 'r'))
-        for row in reader:
-            data.append(row)
+        reader = OpenIOC('./openioc/downloaded/openioc_1.1/ht_ioc_1-1_WithParams.ioc')
+        data = reader.parse()
+        # for row in res:
+        #     data.append(row)
+        print data
         return data
 
 

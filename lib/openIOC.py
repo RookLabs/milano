@@ -1,48 +1,51 @@
 # Imports
-from lxml import etree
+from xml.etree import ElementTree
 from ioc import *
 
 # client_action, returned_types, labels, supported_os
 procTypes = ['ProcessItem', 'UserItem', 'PortItem', 'VolumeItem', 'EventLogItem', 'ServiceItem', 'DiskItem']
 
+Filename,Category,Reference,SHA1,MD5,SHA256 = (0,1,2,3,4,5)
 
 class OpenIOC(object):
   """docstring for OpenIOC"""
 
-  def __init__(self, in_file_name, err_log):
+  def __init__(self, in_file_name):
     super(OpenIOC, self).__init__()
-    self.tree = etree.parse(in_file_name)
+    self.in_file_name = in_file_name
+    self.tree = ElementTree.parse(in_file_name)
     self.root = self.tree.getroot()
     self.seenIndicators = []
     self.seenItems = []
-    self.err_log = err_log
+    self.seenRegItems = []
+    self.data = []
 
 
   def parse(self):
     root = self.root
 
     # Grab meta data
-    name = str(root.find('{http://schemas.mandiant.com/2010/ioc}short_description').text)
-    doc = str(root.find('{http://schemas.mandiant.com/2010/ioc}description').text)
+    name = str(root.getchildren()[0].find('{http://openioc.org/schemas/OpenIOC_1.1}short_description').text)
+    doc = str(root.getchildren()[0].find('{http://openioc.org/schemas/OpenIOC_1.1}description').text)
     defID = str(root.attrib['id'])
 
     # Initialize IOC
-    self.ioc = IOC(name, doc, defID, self.err_log)
+    self.ioc = IOC(name, doc, defID)
 
-    indicatorDict = {}
-    indicatorDict[defID] = {}
-    self.indDict = indicatorDict[defID]
+    # Recursive through Indicators
+    self.recursiveParse( root, self.ioc.logic )
 
-    self.recursiveParse( root, self.ioc.logic)
+    self.defaultReturnData()
 
-    return [self.ioc]
+    # Get the associated data and fill up self.data
+    self.parseParameters( root )
+
+    return self.data
 
 
   def recursiveParse(self, node, outerLogic):
-    isValueUsed = 0
-
     # Iterate Indicators and recurse
-    for indicator in node.iter('{http://schemas.mandiant.com/2010/ioc}Indicator'):
+    for indicator in node.iter('{http://openioc.org/schemas/OpenIOC_1.1}Indicator'):
       # Make sure we don't do extra recursion
       if indicator.attrib['id'] not in self.seenIndicators:
         self.seenIndicators.append(indicator.attrib['id'])
@@ -54,10 +57,11 @@ class OpenIOC(object):
         self.recursiveParse(indicator, logic[0])
 
         # Iterate IndicatorItems
-        for item in indicator.iter('{http://schemas.mandiant.com/2010/ioc}IndicatorItem'):
+        for item in indicator.iter('{http://openioc.org/schemas/OpenIOC_1.1}IndicatorItem'):
+          item_id = item.attrib['id']
           # Make sure we haven't added this from a subgroup
-          if item.attrib['id'] not in self.seenItems:
-            self.seenItems.append(item.attrib['id'])
+          if item_id not in self.seenItems:
+            self.seenItems.append(item_id)
 
             # Contexts / Contents
             for child in item.getchildren():
@@ -66,90 +70,78 @@ class OpenIOC(object):
                 type_name = str(child.attrib['document'])
                 search = str(child.attrib['search'])
 
-                # Check for key_value_pairs
+                # Find key_value_pairs AND registry values w/o key
                 if type_name == 'RegistryItem':
                   # REGISTRY_KEY
                   if search == 'RegistryItem/Path':
                     type_name = 'REGISTRY_KEY'
-                    nextChild = item.getnext().getchildren()[1]
-                    if item.getnext().getchildren()[0].attrib['search'] == 'RegistryItem/Text':
-                      isValueUsed = 1
-                      self.ioc.key_value_pairs.append({ 'key': value, 'value': nextChild.text })
+                    if self.isKeyValuePair(item):
+                      continue
                   # REGISTRY_VALUE
                   elif search == 'RegistryItem/Text':
                     type_name = 'REGISTRY_VALUE'
-                    if not isValueUsed:
-                      self.err_log.write('\nERROR: REGISTRY_KEY without REGISTRY_VALUE.\n')
-                      continue
-                    else:
-                      isValueUsed = 0
-                      continue
-                  # ???
-                  else:
-                    self.err_log.write('\nERROR: Unknown issue with RegistryItem. 1\n')
+                    # if str(child.getnext().text) not in self.seenRegItems:
+                      # self.err_log.write('\nERROR: REGISTRY_KEY without REGISTRY_VALUE.\n')
                     continue
               
-              # Content --> store data
+              # Content --> store value
               elif 'type' in child.attrib.keys():
                 value = str(child.text)
 
-                # If this artifact uses another GRR artifact
-                if type_name in procTypes:
-                  data = value
+                if value not in self.seenRegItems:
+                  # Append the observable to ioc.indDict
+                  self.ioc.add(str(child.attrib['type']), { 'id': item_id, 'value': value })
+                  logic.append(value)
 
-                elif type_name in ['RegistryItem', 'REGISTRY_KEY', 'REGISTRY_VALUE']:
-                  data = value
 
-                elif type_name in ['FileItem', 'DriverItem', 'HookItem']:
-                  if type_name == 'FileItem':
-                    prev_search = child.getprevious().attrib['search'][9:]
-                    if prev_search == 'FullPath':
-                      self.ioc.isUnix = 1
-                    elif prev_search in self.ioc.dump.keys():
-                      # TODO: Handle dump
-                      continue
-                    
-                  type_name = 'FILE'
-                  if value in ['true','false']:
-                    continue
+  def isKeyValuePair(self, item):
+    nextChild_Context = item.getnext().getchildren()[0]
+    nextChild_Content = item.getnext().getchildren()[1]
 
-                  # Check if isWindows or isUnix
-                  if '\\' in value or 'exe' in value:
-                    self.ioc.isWindows = 1
-                  elif '/':
-                    self.ioc.isUnix = 1
-                  # Set OS support
-                  self.ioc.setSupportedOS()
-                  data = value
+    if nextChild_Context.attrib['search'] == 'RegistryItem/Text':
+      key = str(item.getchildren()[1].text)
+      value = str(nextChild_Content.text)
 
-                elif type_name == 'DriverItem':
-                  # ???? Not sure what to do with this yet... ????
-                  data = value
-                else:
-                  continue
+      self.seenRegItems.append(key)
+      self.seenRegItems.append(value)
+      self.ioc.key_value_pairs.append({ 'key': key, 'value': value })
 
-              # Block to append properly
-                # If ARTIFACT_FILE
-                if type_name in procTypes:
-                  # If no ARTIFACT_FILES yet, create dict
-                  if 'ARTIFACT_FILES' not in self.indDict.keys():
-                    self.indDict['ARTIFACT_FILES'] = {}
-                  # If none of this type yet, create list
-                  if type_name not in self.indDict['ARTIFACT_FILES'].keys():
-                    self.indDict['ARTIFACT_FILES'][type_name] = []
+      return True
 
-                  # Append the observable to self.indDict
-                  self.indDict['ARTIFACT_FILES'][type_name].append(data)
-                  logic.append(data)
-                # NOT an ARTIFACT_FILE
-                else:
-                  # If none of this type yet, create list
-                  if type_name not in self.indDict.keys():
-                    self.indDict[type_name] = []
 
-                  # Append the observable to indDict
-                  self.indDict[type_name].append(data)
-                  logic.append(data)
+  def parseParameters(self, root):
+    # If no params, catch exception and leave the default self.data
+    try:
+      param = root.getchildren()[2].getchildren()[0]
+    except:
+      return
+
+    # Wipe out the default
+    self.data = []
+    
+    # Iterate <parameters> sections (should be 1)
+    for item in root.iter('{http://openioc.org/schemas/OpenIOC_1.1}parameters'):
+      # Iterate <param> items
+      for param in item.iter('{http://openioc.org/schemas/OpenIOC_1.1}param'):
+        value_node = param.getchildren()[0]
+        value_list = value_node.text.split(',')
+
+        value_list_noQuotes = []
+
+        for value in value_list:
+          value_list_noQuotes.append(value.replace("'",""))
+
+        # Keep reference of which IOC file this came from
+        value_list_noQuotes.append(self.in_file_name)
+        # Append this row to self.data
+        self.data.append(value_list_noQuotes)
+
+
+  def defaultReturnData(self):
+    for item in self.ioc.indDict['md5']:
+      self.data.append( ['','','','',item['value'],'',self.in_file_name] )
+
+
 
 
 
