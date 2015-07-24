@@ -1,5 +1,12 @@
 Version 1.0.1
-Date    7/22/2015
---------------
+Date    07/22/2015
+------------------
 - Initial open-source release
 - Updated IOCs
+
+Version 2.0.0
+Date    07/28/2015
+------------------
+- Removed quick scan mode. Turns out it's not very comprehensive -- the
+  responsible thing is to remove it, even if the program runs much slower
+  using the other technique.
