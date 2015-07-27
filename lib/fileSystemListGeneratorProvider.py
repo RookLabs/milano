@@ -12,7 +12,7 @@ class FileSystemListGeneratorProvider(FileListGenerator):
 		if 'windows' in str(platform.system).lower():
 			default_path = "C:\\"
 
-		response_default_path = raw_input("Would you like to use the default path for " + platform.system() + " of '" + default_path + "'?  [Y/n]  ")
+		response_default_path = raw_input("Would you like to use the default path for " + platform.system() + " of '" + default_path + "'? [Y/n] ")
 		should_use_default = ( response_default_path.lower() != 'n')
 
 		if should_use_default:
