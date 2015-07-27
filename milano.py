@@ -3,7 +3,7 @@
 import argparse
 import os
 from lib.logger import get_logger
-from lib.new_iocReader import IocReader
+from lib.iocReader import IocReader
 from lib.md5FileSystemScanner import Md5FileSystemScanner
 from lib.fileSystemListGeneratorProvider import FileSystemListGeneratorProvider
 from lib.md5Generator import Md5Generator
@@ -14,18 +14,16 @@ logger = get_logger()
 
 
 class Main(object):
-    ioc_hashes_file = 'openioc/downloaded/openioc_1.1/ht_ioc_1-1_WithParams.ioc'
-
+    ioc_file_path = 'openioc/'
     def __init__(self):
         self.parser = argparse.ArgumentParser(description='Sentinel scans for and reports the presence of malware-related and malware-modified files.')
 
         md5Generator = Md5Generator()
         fileSystemListGeneratorProvider = FileSystemListGeneratorProvider()
-        iocReader = IocReader(Main.ioc_hashes_file)
+
+        iocReader = IocReader(Main.ioc_file_path)
         self.fileSystemScanner = Md5FileSystemScanner(md5Generator, fileSystemListGeneratorProvider, iocReader, logger)
-
         self.resultsWriter = ResultsWriter(logger)
-
 
     def execute(self):
         app.process_arguments()
