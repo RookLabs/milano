@@ -35,11 +35,10 @@ class OpenIOC(object):
     # Recursive through Indicators
     self.recursiveParse( root, self.ioc.logic )
 
-    # If no params, catch exception and leave the default self.data
+    # If parameters, use them. Else, do without
     try:
       param = root.getchildren()[2].getchildren()[0]
-      # Worked
-      # Get the associated data and fill up self.data
+      # Worked - Get the associated data and fill up self.data
       self.parseWithParameters()
     except:
       self.parseWithOutParameters()
