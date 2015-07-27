@@ -35,10 +35,15 @@ class OpenIOC(object):
     # Recursive through Indicators
     self.recursiveParse( root, self.ioc.logic )
 
-    self.defaultReturnData()
+    # If no params, catch exception and leave the default self.data
+    try:
+      param = root.getchildren()[2].getchildren()[0]
+      # Worked
+      # Get the associated data and fill up self.data
+      self.parseWithParameters()
+    except:
+      self.parseWithOutParameters()
 
-    # Get the associated data and fill up self.data
-    self.parseParameters( root )
 
     return self.data
 
@@ -109,16 +114,9 @@ class OpenIOC(object):
       return True
 
 
-  def parseParameters(self, root):
-    # If no params, catch exception and leave the default self.data
-    try:
-      param = root.getchildren()[2].getchildren()[0]
-    except:
-      return
+  def parseWithParameters(self):
+    root = self.root
 
-    # Wipe out the default
-    self.data = []
-    
     # Iterate <parameters> sections (should be 1)
     for item in root.iter('{http://openioc.org/schemas/OpenIOC_1.1}parameters'):
       # Iterate <param> items
@@ -137,7 +135,7 @@ class OpenIOC(object):
         self.data.append(value_list_noQuotes)
 
 
-  def defaultReturnData(self):
+  def parseWithOutParameters(self):
     for item in self.ioc.indDict['md5']:
       self.data.append( ['','','','',item['value'],'',self.in_file_name] )
 

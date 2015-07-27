@@ -12,7 +12,7 @@ class IocReader(object):
         print self.ioc_filepath
         reader = OpenIOC(self.ioc_filepath)
         data = reader.parse()
-        # print data
+        print data
         return data
 
 
