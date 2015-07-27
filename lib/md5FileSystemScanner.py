@@ -32,11 +32,11 @@ class Md5FileSystemScanner(object):
                     my_md5 = self.md5Generator.compute_md5(path)
                     self.logger.info('Checking path: ' + path)
                     if self.iocReader.has_md5(my_md5):
-                        self.logger.info('   Detected potentially malicious file at path: ' + path)
+                        self.logger.info('    Detected potentially malicious file at path: ' + path)
                         potential_category = self.iocReader.get_potential_category(my_md5)
                         results.detected_file_paths.append(PotentialFile(path, potential_category))
                     else:
-                        self.logger.info('   File clean')
+                        self.logger.info('    File clean')
 
             except IOError, err:
                 # Socket error possibly
