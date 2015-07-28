@@ -48,6 +48,7 @@ class IocReader(object):
                             logger.info("Invalid ioc file -> " + fpath)
                             logger.info("\n=================================\n")
                             exit(1)
+
         return data
 
     def has_md5(self, md5):
@@ -57,6 +58,10 @@ class IocReader(object):
     def get_potential_category(self, md5):
         results = [ row for row in self.iocData if row[IocReader.MD5] == md5 ]
         return results[0][IocReader.Category]
+
+    def get_source_ioc(self, md5):
+        results = [ row for row in self.iocData if row[IocReader.MD5] == md5 ]
+        return results[0][IocReader.Filename]
 
     def get_suspect_filenames(self):
         filenames = []

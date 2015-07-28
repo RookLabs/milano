@@ -24,7 +24,7 @@ class ResultsWriter(object):
 
 		if len(results.detected_file_paths) > 0:
 			for path in results.detected_file_paths:
-				output += path.potential_category + ': ' + path.file_path + '\n'
+				output += path.potential_category + ': ' + path.file_path + ' (' + source_ioc + ')\n'
 		else:
 			output += 'No files found that require review\n'
 
@@ -60,6 +60,7 @@ class Results(object):
 
 
 class PotentialFile(object):
-	def __init__(self, file_path, potential_category):
+	def __init__(self, file_path, potential_category, source_ioc):
 		self.file_path = file_path
 		self.potential_category = potential_category
+		self.source_ioc = source_ioc
