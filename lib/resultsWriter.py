@@ -24,7 +24,7 @@ class ResultsWriter(object):
 
 		if len(results.detected_file_paths) > 0:
 			for path in results.detected_file_paths:
-				output += path.potential_category + ': ' + path.file_path + ' (' + source_ioc + ')\n'
+				output += path.potential_category + ': ' + path.file_path + ' (' + path.source_ioc + ')\n'
 		else:
 			output += 'No files found that require review\n'
 

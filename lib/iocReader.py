@@ -5,7 +5,7 @@ import os
 logger = get_logger()
 
 class IocReader(object):
-    Filename,Category,Reference,SHA1,MD5,SHA256 = (0,1,2,3,4,5)
+    Filename,Category,Reference,SHA1,MD5,SHA256,Source = (0,1,2,3,4,5,6)
 
     def __init__(self, ioc_filepath):
         self.ioc_filepath = ioc_filepath
@@ -52,21 +52,27 @@ class IocReader(object):
         return data
 
     def has_md5(self, md5):
-        results = [ row for row in self.iocData if row[IocReader.MD5] == md5 ]
-        return len(results) > 0
-
+        for row in self.iocData:
+            for ioc in row:
+                if ioc[IocReader.MD5] == md5:
+                    return True
+       
     def get_potential_category(self, md5):
-        results = [ row for row in self.iocData if row[IocReader.MD5] == md5 ]
-        return results[0][IocReader.Category]
+        for row in self.iocData:
+            for ioc in row:
+                if ioc[IocReader.MD5] == md5:
+                    return ioc[IocReader.Category]
 
     def get_source_ioc(self, md5):
-        results = [ row for row in self.iocData if row[IocReader.MD5] == md5 ]
-        return results[0][IocReader.Filename]
+        for row in self.iocData:
+            for ioc in row:
+                if ioc[IocReader.MD5] == md5:
+                    return ioc[IocReader.Source]
 
     def get_suspect_filenames(self):
         filenames = []
         for row in self.iocData:
-            for item in row:
-                filenames.append(item[0])
+            for ioc in row:
+                filenames.append(IocReader.Filename)
         # removed duplicates
         return list(set(filenames))
