@@ -44,10 +44,10 @@ class IocReader(object):
                         reader = OpenIOC(fpath)
                         data.append(reader.parse())
                     except:
-                            logger.info("\n============= ERROR =============\n")
-                            logger.info("Invalid ioc file -> " + fpath)
-                            logger.info("\n=================================\n")
-                            exit(1)
+                        logger.info("\n============= ERROR =============\n")
+                        logger.info("Invalid ioc file -> " + fpath)
+                        logger.info("\n=================================\n")
+                        exit(1)
 
         return data
 
