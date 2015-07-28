@@ -29,8 +29,8 @@ class Md5FileSystemScanner(object):
         for path in pathGenerator:
             try:
                 if self.should_scan_file(path):
-                    my_md5 = self.md5Generator.compute_md5(path)
                     self.logger.info('Checking: ' + path)
+                    my_md5 = self.md5Generator.compute_md5(path)
                     if self.iocReader.has_md5(my_md5):
                         self.logger.info('    Detected potentially malicious file at path: ' + path)
                         potential_category = self.iocReader.get_potential_category(my_md5)
