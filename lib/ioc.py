@@ -53,7 +53,6 @@ class IOC(object):
     
     # This IOC is almost done, determine supported_os
     if self.isWindows:
-      # print 'IT REALLY IS WINDOWS'
       self.supported_os = '['+full_os_list[0]+']'
     elif self.isUnix:
       self.supported_os = str(full_os_list[1:])

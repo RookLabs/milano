@@ -39,12 +39,10 @@ class Md5FileSystemScanner(object):
 
             except IOError, err:
                 # Socket error possibly
-                #print err
                 # TODO - log these errors.
                 pass
             except OSError, err:
                 # File doesn't exist
-                #print err
                 # TODO - log these errors.
                 pass
 

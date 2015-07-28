@@ -1,5 +1,8 @@
 import os
 import hashlib
+from lib.logger import get_logger
+
+logger = get_logger()
 
 class Md5Generator(object):
     def compute_md5(self, file_path):
@@ -12,5 +15,5 @@ class Md5Generator(object):
 
 if __name__ == "__main__":
     g = Md5Generator()
-    print '/dev/urandom md5 -> {}'.format(g.compute_md5('/dev/urandom'))
-    print '/boot/vmlinuz-3.16.0-43-generic md5 -> {}'.format(g.compute_md5('/boot/vmlinuz-3.16.0-43-generic'))
+    logger.info('/dev/urandom md5 -> {}'.format(g.compute_md5('/dev/urandom')))
+    logger.info('/boot/vmlinuz-3.16.0-43-generic md5 -> {}'.format(g.compute_md5('/boot/vmlinuz-3.16.0-43-generic')))

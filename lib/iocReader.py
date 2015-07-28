@@ -1,5 +1,8 @@
 from openIOC import *
+from lib.logger import get_logger
 import os 
+
+logger = get_logger()
 
 class IocReader(object):
     Filename,Category,Reference,SHA1,MD5,SHA256 = (0,1,2,3,4,5)
@@ -13,29 +16,38 @@ class IocReader(object):
         for path, subdirs, files in os.walk(self.ioc_filepath):
             for filename in files:
                 fpath = os.path.join(path, filename)
+
+                # future validation purposes, 1.1 validator/xsd in root of openico/
                 if 'user-added' in fpath and '.ioc' in fpath:
                     if '1.1' in fpath:
                         try:
                             reader = OpenIOC(fpath)
                             data.append(reader.parse())
                         except:
-                            print "Error: invalid ioc file ->", fpath
-                            # exit(1)
+                            
+                            logger.info("\n============= ERROR =============\n")
+                            logger.info("Invalid ioc file -> " + fpath)
+                            logger.info("\n=================================\n")
+                            exit(1)
                     else:
                         try:
                             reader = OpenIOC(fpath)
                             data.append(reader.parse())
                         except:
-                            print "Error: invalid ioc file ->", fpath
-                            # exit(1)
+                            logger.info("\n============= ERROR =============\n")
+                            logger.info("Invalid ioc file -> " + fpath)
+                            logger.info("\n=================================\n")
+                            exit(1)
 
                 if 'downloaded' in fpath and '1.1' in fpath and '.ioc' in fpath:
                     try:
                         reader = OpenIOC(fpath)
                         data.append(reader.parse())
                     except:
-                        print "Error: invalid ioc file ->", fpath
-                        # exit(1)
+                            logger.info("\n============= ERROR =============\n")
+                            logger.info("Invalid ioc file -> " + fpath)
+                            logger.info("\n=================================\n")
+                            exit(1)
         return data
 
     def has_md5(self, md5):
