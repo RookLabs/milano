@@ -15,7 +15,7 @@ class ResultsWriter(object):
 	def get_output(self, results):
 		output = 'Scan date: ' + time.strftime("%c") + \
 			'\n' + \
-			'Scan duration (seconds): ' + str(results.scan_time_seconds) + \
+			'Scan duration: {0:.3f} minutes ({1:.3f} seconds)'.format((results.scan_time_seconds / 60), results.scan_time_seconds) + \
 			'\n\n' + \
 			'Files requiring review as they match Hacking Team MD5 signatures\n' + \
 			'  Category (A=Detected via VirusTotal  B=Detected via manual analysis\n' + \
