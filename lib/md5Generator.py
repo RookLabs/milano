@@ -1,5 +1,4 @@
 import os
-import stat
 import hashlib
 
 class Md5Generator(object):

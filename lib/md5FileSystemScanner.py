@@ -1,4 +1,5 @@
 import os
+import stat
 from resultsWriter import Results
 from resultsWriter import PotentialFile
 import ntpath
@@ -52,10 +53,11 @@ class Md5FileSystemScanner(object):
 
 
     def should_scan_file(self, path):
-        if path.startswith('/proc/') or path.startswith('/run/'):
-            return False
+        st = os.lstat(path)
+        if stat.S_ISREG(st.st_mode):
+            return True
 
-        return True
+        return False
 
 
 if __name__ == '__main__':
