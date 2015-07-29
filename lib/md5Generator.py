@@ -7,7 +7,14 @@ logger = get_logger()
 class Md5Generator(object):
     def compute_md5(self, file_path):
         m = hashlib.md5()
-        with os.fdopen(os.open(file_path, (os.O_RDONLY | os.O_NONBLOCK | os.O_NOFOLLOW))) as f:
+
+        fd = -1
+        if os.name == 'posix':
+            fd = os.open(file_path, (os.O_RDONLY | os.O_NONBLOCK | os.O_NOFOLLOW))
+        else:
+            fd = os.open(file_path, os.O_RDONLY)
+
+        with os.fdopen(fd) as f:
             for chunk in iter(lambda: f.read(hashlib.md5().block_size * 512), b''):
                 m.update(chunk)
 
