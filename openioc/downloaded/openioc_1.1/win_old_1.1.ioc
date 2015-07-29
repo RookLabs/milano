@@ -1,0 +1,628 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<OpenIOC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://openioc.org/schemas/OpenIOC_1.1" id="c449cf90-4821-47cd-971d-7ff00111cad1" last-modified="2015-07-29T05:37:11" published-date="2015-07-29T05:37:11">
+    <metadata>
+        <short_description>Rook</short_description>
+        <description>
+            IOC
+        </description>
+        <keywords/>
+        <authored_by>Rook Security</authored_by>
+        <authored_date>2015-07-29T05:37:11</authored_date>
+        <links/>
+    </metadata>
+    <criteria>
+        <Indicator operator="OR" id="4518c85d-8d90-432c-811f-0f75352326f3">
+            <Indicator operator="OR" id="dba7a965-ec65-45f0-8b99-43cf1caa6901">
+                <IndicatorItem id="908e760f-d354-4133-bb99-535872b0ce7c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">ApiHookDll32.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="05136960-9368-4e27-b050-c1816df6b6ed" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">713c269faa5f650710997004d3be6971</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f42b4b0f-50bf-4535-8d0c-8aec356b8c69" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">6739dd4361c559fd9099dfc967b06eb5bac95ee8693986ac29c7b368dc7cff08</Content>
+                </IndicatorItem>
+                <IndicatorItem id="a0275f85-d1ef-4ec4-84e3-1fcf71958cb9" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">dd6ac4da70c52dc6aad69590c2335925859c838b</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="a629978f-8c11-4818-9769-b484f22a9027">
+                <IndicatorItem id="8ebc5501-db4b-4a4f-a7c2-7323349c7a44" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">ApiHookDll64.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="29d8b339-7abd-4ec3-b310-a458a5e7a6d5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">4c5f33ef824dbe36543a2b7e533dd179</Content>
+                </IndicatorItem>
+                <IndicatorItem id="259ab83f-e6a0-4d95-84ea-a650c5161382" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">8d13453b459acd28dbc706677983b1397912124acf802dfa2b2f5c64f45c230b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e9b5342f-2f9c-4eb4-bb35-3a6f145d669b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">b630c8bbbd1b957e21dbbdd5b4419a676f53e303</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="7fef7ec1-1dec-4782-8923-3cc681dcb449">
+                <IndicatorItem id="98c0cd81-b7cb-4710-9de2-a8373b371692" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">ApiHookDll.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="fe7e8785-4095-4f6e-89bc-172ae35e8727" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">7a4dbc7cd77b981f5c742b93926cd030</Content>
+                </IndicatorItem>
+                <IndicatorItem id="0124b698-42e8-4ddc-b4b0-fb2ab51bb3f9" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">c585f02a22f2fe7dd7a1720bfc119613ea32b589ea72dbeb4d6c91d8e7bf399a</Content>
+                </IndicatorItem>
+                <IndicatorItem id="019e05f9-a96a-4cdf-9fae-fc212538fee6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">40cc3e2939bc3f8a4aebdaa3aab49de8cc384642</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d0b33b35-d1e4-4e2c-82f6-5e4956c45614">
+                <IndicatorItem id="00924dfd-623f-4000-ad2a-f14264166539" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">ArcDropper.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="fc26234c-15e8-4e3d-b6aa-5459edf3bbf9" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">a226d93f726bdaf119088e62b9b70989</Content>
+                </IndicatorItem>
+                <IndicatorItem id="daf89df2-0183-4de4-b8de-d1968f2fc081" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">b20b198d9e3af27ecac4a83b66234cae4eef6db0c1192b6f9ba9ca946033034b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1b5dc850-802d-46ec-9053-a1196aec8349" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">df7e96430c086efef38810de0ce981f7c4b5bd3a</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d2b9294e-1637-4700-b0c1-ac7d32421564">
+                <IndicatorItem id="6af1a1db-7dd3-4ba4-9ffc-77caa4bc93d8" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">AsmJit.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="76b9fbbd-2097-478d-b3a5-7dc8014b972b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">5a053eb4538a0553889651ea7b54f590</Content>
+                </IndicatorItem>
+                <IndicatorItem id="08dd304d-e862-4880-a665-e628f066ca41" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">595e4dc95b391a0566bc8c9d32d352c205d0f8ae19d3842f6d914f0b696f98e2</Content>
+                </IndicatorItem>
+                <IndicatorItem id="0b7f3433-f1f4-421a-b55d-47ab0277258c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">33da4a93916af6034463aadbda97ad18671d45e1</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="ce61691e-34ee-4755-8d03-5801801584e0">
+                <IndicatorItem id="339409f5-b7ea-4e0c-9914-04c89236c909" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">bcmhooks.resources.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="bb2c7ec3-a984-426b-b810-80142e780d79" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">8e1a49e6c6f2a6f707b7181f2546eb41</Content>
+                </IndicatorItem>
+                <IndicatorItem id="cb140ac8-edca-4ee4-af6e-c0ebcbd60a1f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">3e0d7773c6261d5f54924febec163163e9e434fe1b6cb59daff06dff190987c4</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e8c07fff-cb31-4cb2-861d-ebc980e006e5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">0724c43637816b3d39a79bbbe4afe8005c93bbd8</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="2dd6c953-c6ee-4033-8f4e-6fb514cdd599">
+                <IndicatorItem id="3eada7ae-8b1c-4770-9a8e-622a4b08df36" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">BCMHooks.resources.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d47d122c-11f2-42d4-9343-f90252559420" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">8e1a49e6c6f2a6f707b7181f2546eb41</Content>
+                </IndicatorItem>
+                <IndicatorItem id="0bc65081-0f6d-4b9f-9bda-c466939826e7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">3e0d7773c6261d5f54924febec163163e9e434fe1b6cb59daff06dff190987c4</Content>
+                </IndicatorItem>
+                <IndicatorItem id="3c4e740b-87db-4b5a-b8f5-ae6555199984" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">0724c43637816b3d39a79bbbe4afe8005c93bbd8</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="3e3af1bc-81d3-448e-bf92-a117dc6f0d59">
+                <IndicatorItem id="76550e61-c312-4efc-ae96-9d80650f2a3a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">BCMRes.resources.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="8e99e04c-6802-462f-80e9-d256dc012172" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">9b71c1e2b8951da4690ef05eecd67770</Content>
+                </IndicatorItem>
+                <IndicatorItem id="cfd95d65-c14e-4831-9231-e77f9b14fff8" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">80ea72c70d8de5e111d4be5fa7515c0b35bbdecc2a4997c2930e918bc263c4c1</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c2678574-b396-4776-9f5e-b30eaf929d17" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">4780d4daac7f4a74ded784571e7bf3e245bff7e9</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="db2e9100-d20a-4121-bf2f-08239cbeda39">
+                <IndicatorItem id="46cbd551-82c6-44a8-9e0b-b24b1eec37b6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">BusinessLayer.resources.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c8cfd229-09b8-493c-9fe8-237adde6d127" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">357df22e4e92681e4f7fd0168caf51ae</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d48002f2-fa10-42a3-a0c0-b28b67a78e0b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">1c83f67e338502f500d131e6f69c40a23ba4cf94e38e050de578733cd397126b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5a1e3d16-bc40-45e3-83bf-30f6ca9e8bba" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">224aa1856ead0722c5d5287b46dd32d1fb111371</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="261ba4c5-7616-423d-89dc-564df1c62a36">
+                <IndicatorItem id="515c22ad-0bf7-4b2c-8841-dbab286dd517" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">codec.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="cf3ec3fb-df15-4c1b-bc09-8268bdd71779" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">48d638a3194f8740d9f05faf62670ff9</Content>
+                </IndicatorItem>
+                <IndicatorItem id="64ef39bd-d4d3-4eba-981b-4d392507c32d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">fb3b9464e866b35b3d7a3b506f967b32e1c2015e0703780c89993ce6d50a0ea6</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f373c651-59b7-40cd-8dd5-5e7c1489024f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">1351e784ebdffacf0fd143c07581136e94ca2319</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="87c86686-484b-4105-b0a3-bfcdcc1c0b57">
+                <IndicatorItem id="c876c212-cd95-41a1-817e-938d2505fd4c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="66a1efb1-4489-4484-b0cb-adec26734592" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">9bce542aa3fdd21c63e18d453ae8039d</Content>
+                </IndicatorItem>
+                <IndicatorItem id="54aa75ff-a5a8-4130-8db3-b0e3071490d9" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">957fcc2d137e9164635831dd0ab8bca8079ec8b1a4c2eb6e8ac254c5732b025b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="b0c75b75-1b1d-4501-ae0b-676f75dc8436" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">a3a7545333638ec13ad33af6c4ec32a2d4f56c5d</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="b783ec0f-83a1-44ae-b69d-fd011df3ff8e">
+                <IndicatorItem id="280ef06b-d482-4e50-b559-eb79a2b312a7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">cyggcc_s-1.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="79615091-5ae3-4859-96af-52dc130eee95" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">b517ea5d532c329d82bd0bb8a8239c21</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e292f844-d43e-4d3a-925d-668738bc9c9e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">bdb971f13959add3ff1f61c2e1ac4368f7a706bec401b8bf81904b27fe6e59fe</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1b4d525a-324d-4c8c-822d-cdfceea8b242" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">1ced2955164b7492fd6ba609c504cfd5107aa98d</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="b12039c2-e39b-4c12-9261-4329dd9fc37d">
+                <IndicatorItem id="689af7ce-a28f-4561-a059-e64066909089" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">dll64.win32</Content>
+                </IndicatorItem>
+                <IndicatorItem id="0cc03bc9-5386-4502-a081-dbac6951bc7c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">33f2a0070170ab861e92435114db52d8</Content>
+                </IndicatorItem>
+                <IndicatorItem id="cc343538-b703-43b6-b478-aff560ae9f36" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">bfb2ac272617e4af5ddf176bb4bffcc090e47b1208f4285a7108d6a59ec51837</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c80843d9-0c90-492e-a237-eef375bc1f8f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">4437315b462fce721d16edbe77362b0e634aa559</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d5078490-7501-4ac0-be67-e98021eae00f">
+                <IndicatorItem id="51cb0982-ec13-4b48-a7e8-9cf0cceb5b74" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">DynMenu.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c5c84075-045c-4e49-afe3-f173e57e5307" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">145b5fe784160a39877eddc6e7629155</Content>
+                </IndicatorItem>
+                <IndicatorItem id="af1e9986-cab8-4cfe-bc00-e333dfd54377" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">ddf1371ec3cafedd2caacfa351e9be77e9dbf263f143d6f81a6202e4303ac8d8</Content>
+                </IndicatorItem>
+                <IndicatorItem id="80ad988c-d798-45f7-bb7d-f1fbac7879f0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">c281e6eeab03aa06784f21206c86f2b30fec1dc7</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="022c9f25-8a5a-4068-9a63-48a3dd394ac0">
+                <IndicatorItem id="b34046f4-1a72-4f1b-869f-ecb42e79d9b3" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">elevator.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="afee74ba-c61f-4fd1-b952-634be8761954" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">56eac983a8caa8c0037c6ba25e9a2d9f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="b5b160a5-dd67-4fef-a092-e942f8b2ec8f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">fc609adef44b5c64de029b2b2cff22a6f36b6bdf9463c1bd320a522ed39de5d9</Content>
+                </IndicatorItem>
+                <IndicatorItem id="b73f7f5b-318f-4d74-af5a-29f188f832a4" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">b7ec5d36ca702cc9690ac7279fd4fea28d8bd060</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="1e93d0e6-6a1d-4f57-bd7e-f4ef521e3190">
+                <IndicatorItem id="dd48a9b1-79e6-4adf-afff-6d3062a5ba67" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">H4DLL.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="287d917f-965f-41db-ab31-d3fe4ae9b1fe" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">aaf26a0477841b45969fdce35bd2e1e1</Content>
+                </IndicatorItem>
+                <IndicatorItem id="45c9103a-773a-4aed-8cf5-e735820b19f0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">d9c55606c757e78940c3a22fc25ae12ed93a68c9f88983e58cd4795047504246</Content>
+                </IndicatorItem>
+                <IndicatorItem id="38a23afb-1b21-4a7e-8a14-a965dacf0d33" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">e113e2904aaae7aa5c2438fea757846cad8a7e9b</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="eb469588-d6b6-4a4f-a2f5-f62a386e2980">
+                <IndicatorItem id="e08291c5-3b10-42c5-93e9-2e1703065eeb" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">H4DLL_NonStruct_Kaspersky.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="010436ac-6d29-4fd0-9240-f70d38fe9c5e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">32d9d4da5e7b99e2d70200d14003e830</Content>
+                </IndicatorItem>
+                <IndicatorItem id="2ec8cd87-acf0-46a5-9bed-7e622c30ce93" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">a61c9ae6ac4149619f058a09b83e7ba16bf6bf2492201fa299c25495ef01ba30</Content>
+                </IndicatorItem>
+                <IndicatorItem id="da3c92bc-806a-4062-8ec3-e00576f9c00c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">83852d86836e9d2193067919815418972e5cc03a</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="f6295951-a83b-44c1-afb6-8ecce2401ffe">
+                <IndicatorItem id="10505461-9cd4-4858-a1bd-8b6eeb6b376c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">H4DLL-VISTA.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="94a13fd1-8f91-4d4c-aa80-cdbf5525f669" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">738cf6db1f93006967ed1aeef87c6ba6</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1e35c9d6-5d33-4e81-9936-09b5d6bc2c38" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">5f6bc6573d006609d1f0b5c3d051dc6eb5b30dbc60c4e2e7c7b6826434c6a59b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f3b2561b-836b-4338-908b-0a6a3b627247" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">d89f0d3e65532a41615d0ee21f2b2379eb0b27d5</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="77130e94-88ad-40d3-b7d9-63fe8cd85212">
+                <IndicatorItem id="b4c61822-91e5-40ed-8789-97029a41f364" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">Mpk.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="8213310d-11ca-4ff8-9065-58c19f5915ee" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">f713c1e740d67292db2d96c7755a63bc</Content>
+                </IndicatorItem>
+                <IndicatorItem id="a879f018-e418-4aa7-ad6e-12fff1dab58a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">9f3673b51a622dbe8ea5f92ad37ff12ed0a03ff5c30a9ca20575dca08c624fa3</Content>
+                </IndicatorItem>
+                <IndicatorItem id="07528454-a558-46ae-b6f4-d0e68d304f63" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">0540e5eacd37ea3285f8a239dd72e3e7e4faf33e</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d7c13d95-b89b-4f5c-8c50-a9ee920c2eb3">
+                <IndicatorItem id="f3d6dd4b-45a5-4cda-b941-b6a88c2cd6ab" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">old_cert_elevator.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="65e75aff-0bf5-40c1-83c9-2de279addb9f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">56eac983a8caa8c0037c6ba25e9a2d9f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="a3d238ee-b8c2-4bda-a057-d1d62c988440" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">fc609adef44b5c64de029b2b2cff22a6f36b6bdf9463c1bd320a522ed39de5d9</Content>
+                </IndicatorItem>
+                <IndicatorItem id="81836c9c-5c5e-42c1-b27e-575f018aef1e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">b7ec5d36ca702cc9690ac7279fd4fea28d8bd060</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d636a5fa-b49c-44d3-8e66-8d304de517be">
+                <IndicatorItem id="662ed9c6-0a93-4547-a266-369a6dc2d19e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">PMIEFuck-WinWord.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="2b241467-7230-4540-9778-724762a49299" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">b58e692d0558ba1b9cfcdda2775c7fac</Content>
+                </IndicatorItem>
+                <IndicatorItem id="aad5f1fb-b3ce-4749-b262-1202fc9b2054" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">ad55c2dcf7e3373ea074061d119c891b34e4364cd7f5f679b475b5ec3371592e</Content>
+                </IndicatorItem>
+                <IndicatorItem id="8710b782-be94-4445-9b94-558abc79c05b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">d2cc4bf197b9d408bcec69252725bbcdb516308c</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="9c9e9f11-8cc9-4d39-97d4-b84e43be093b">
+                <IndicatorItem id="c403de97-1c69-4ec4-b8f8-e2d66c5d8fb1" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">RCSMobile_2011032101-debug.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="a410784f-8b0c-42e7-a99d-e0649a0086a5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">63de9e55e07f81e6d38eb859483b103d</Content>
+                </IndicatorItem>
+                <IndicatorItem id="cb068c8b-41a5-4750-a354-34bf7d0a900e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">6d22dbb5285391be5dcce7a2aed9f14b7ef57de90fd5b02d4bd7ba07d4a5d455</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ba90cc5d-e5ed-42f6-a2f5-0384a1066ebe" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">9cfa6d066024a458e133fb9cfbafbdfa0b1c64f9</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="3e519052-14bb-4eb6-9cc5-2c29ad0e3631">
+                <IndicatorItem id="0e3c991b-2907-4fb0-8cff-d0564b04061a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">rcsmobile-2012013101.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ce1995fc-09ce-40b2-96aa-3566ab87acc7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">0df77ac381a54c34bf3f12d13f516be1</Content>
+                </IndicatorItem>
+                <IndicatorItem id="6999206b-cb68-4da4-a152-8a1041f44e4b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">5e75e0babe92f1a7691a43641fadb7be84d4d273b8bcc6cce5dfeb5523a6b709</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f4b67fb1-7b8d-41f7-88e8-c7e7d1f29b0c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">13b20e7945eb7342540b5fab2eb2f03063518239</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="ddf7dc2b-7f83-4d77-b666-34c2bd68b475">
+                <IndicatorItem id="723ddc02-737e-430a-9546-3628ebd26dd9" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">setup.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="9a5a038c-875f-4232-81f1-a49c1766cc93" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">1c5764dd71b9109dbbcd83201be2ceae</Content>
+                </IndicatorItem>
+                <IndicatorItem id="31c7a750-2f18-47e5-ae22-eb7761af4a06" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">abbac3dda22f825197dd65b8c1076c5ab8d7ecaa2ce2821b242f63154eafce3a</Content>
+                </IndicatorItem>
+                <IndicatorItem id="9da9284c-2b09-4417-abda-4e3b7a50fecd" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">f9860169568558df2eb06b9a7ab9d0a89f45cd44</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="36504ff7-cc5f-48fe-86ed-afaa5085824a">
+                <IndicatorItem id="b3a1dfc7-d85b-43be-883f-ea429c0c1105" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">SmsFilter.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="406bf158-33b1-41e8-8972-e064efb2db80" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">44a6cdacf598a7905401b4f32d13eb41</Content>
+                </IndicatorItem>
+                <IndicatorItem id="fc14001c-719b-409e-b0af-b503a88119c0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">f3caf8fac708bf3a4ea0511e06849a169e020bdf19c0f8f526abce0b3951fa42</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f61b2d62-db7a-44f7-8841-408b16e7a426" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">4be90804476b2833fe6afcaba35b07ecaa522a2c</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="574bb4f1-da22-4d6c-8a6a-55fa1fad609b">
+                <IndicatorItem id="ddb8fe1c-8474-4e69-98aa-b0480be352c5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">sseIdrvdll32e.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1e2fb2bf-fad2-434a-a0ee-9f706b4f4f39" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">0f5817f32ff94351ed4133be59b319b9</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f1684365-4fe1-42ca-89ee-c2c0fe61e221" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">8ee48f42bcc3006d84ac7230f8a3aa811bbe1c0d5120573638c5ffe41af15fe8</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5cbad643-0d2a-4ba8-8d4b-1bed73b448a6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">ca5ddf4b72258eb3c3d49a4511858ea4a2c18653</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="0f6e422d-6e98-4718-8f04-58107982e666">
+                <IndicatorItem id="8c5a9615-3e4b-4b50-9eab-d398d53dcfe9" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">ssePmxdll32e.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="855b358f-70ef-4fa4-89da-ce8719663344" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">d40c814ee7918bf836f4ef7fe065e2f5</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1d826dae-d737-487c-9042-a56c9c57c6fb" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">b26d39d79b068a7d13fe3526f29bb26165b518fca3b0baf28ad0daa8ed576e85</Content>
+                </IndicatorItem>
+                <IndicatorItem id="73e26fa6-1966-4bb3-aa81-0df88482c5c1" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">cdf2e2fa4d33f7e9813bd4f900ae321c5605c1d8</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="dc5600ad-0d91-4539-92b3-d8718ed4f8fe">
+                <IndicatorItem id="5023fb86-f467-46f2-900d-dbff4c46c44c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">VMProtect_Ext.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="dbcccc7b-8843-4a79-bbf0-0a8320c8dc26" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">7c43361c94bddf46c991eb83d9955596</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f1e64858-5cf2-4d10-899e-12ac97afb127" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">e4c4086b2cd79453fd7a25db4c079f4ff1d183947499fdd4961f5df8d60a1c6d</Content>
+                </IndicatorItem>
+                <IndicatorItem id="939a20ad-3181-49f8-a314-722343fcf9dd" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">56d62fae86162da2fd798dbc8eeecb088c7c20eb</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="9587e59b-8859-4cca-8248-7e75729b008f">
+                <IndicatorItem id="9c9d4362-eea6-4232-9c59-0213573f06d3" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">VR2.dll</Content>
+                </IndicatorItem>
+                <IndicatorItem id="bdc4225a-ab34-43fa-a2cc-6bb655646cb5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">2fe29513b40eb73e122285513d91ff04</Content>
+                </IndicatorItem>
+                <IndicatorItem id="15b02b35-7287-4cc9-b1ca-8b96f6cb2757" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">5af63dcc0c0330a2de8e4a3f3756e7951d2ce02655f94eee77682653eb6ae949</Content>
+                </IndicatorItem>
+                <IndicatorItem id="204a669b-16e4-4636-837a-7688532aa52c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">e904dca98c2fec54b8c07befefa4b65c65058f75</Content>
+                </IndicatorItem>
+            </Indicator> 
+        </Indicator>
+    </criteria>
+    <parameters>
+        <param ref-id="05136960-9368-4e27-b050-c1816df6b6ed" id="3d1f390a-6463-42a8-a351-5bb36627cc1f" name="">
+            <value type="data_list">'ApiHookDll32.dll','A','https://www.virustotal.com/en/file/6739dd4361c559fd9099dfc967b06eb5bac95ee8693986ac29c7b368dc7cff08/analysis/','dd6ac4da70c52dc6aad69590c2335925859c838b','713c269faa5f650710997004d3be6971','6739dd4361c559fd9099dfc967b06eb5bac95ee8693986ac29c7b368dc7cff08'</value>
+        </param>
+        <param ref-id="29d8b339-7abd-4ec3-b310-a458a5e7a6d5" id="b0207171-245a-4a8b-aa51-386e4a8a4b1d" name="">
+            <value type="data_list">'ApiHookDll64.dll','CD','https://www.virustotal.com/en/file/8d13453b459acd28dbc706677983b1397912124acf802dfa2b2f5c64f45c230b/analysis/','b630c8bbbd1b957e21dbbdd5b4419a676f53e303','4c5f33ef824dbe36543a2b7e533dd179','8d13453b459acd28dbc706677983b1397912124acf802dfa2b2f5c64f45c230b'</value>
+        </param>
+        <param ref-id="fe7e8785-4095-4f6e-89bc-172ae35e8727" id="9e795b46-4f1d-452f-be04-5e9a9df73227" name="">
+            <value type="data_list">'ApiHookDll.dll','CD','https://www.virustotal.com/en/file/c585f02a22f2fe7dd7a1720bfc119613ea32b589ea72dbeb4d6c91d8e7bf399a/analysis/','40cc3e2939bc3f8a4aebdaa3aab49de8cc384642','7a4dbc7cd77b981f5c742b93926cd030','c585f02a22f2fe7dd7a1720bfc119613ea32b589ea72dbeb4d6c91d8e7bf399a'</value>
+        </param>
+        <param ref-id="fc26234c-15e8-4e3d-b6aa-5459edf3bbf9" id="6ccef38b-384b-48d6-98c6-aaf2b93dc224" name="">
+            <value type="data_list">'ArcDropper.dll','B','https://www.virustotal.com/en/file/b20b198d9e3af27ecac4a83b66234cae4eef6db0c1192b6f9ba9ca946033034b/analysis/','df7e96430c086efef38810de0ce981f7c4b5bd3a','a226d93f726bdaf119088e62b9b70989','b20b198d9e3af27ecac4a83b66234cae4eef6db0c1192b6f9ba9ca946033034b'</value>
+        </param>
+        <param ref-id="76b9fbbd-2097-478d-b3a5-7dc8014b972b" id="d6ccc4b6-e049-4eff-82ce-a48d2405a13c" name="">
+            <value type="data_list">'AsmJit.dll','CD','https://www.virustotal.com/en/file/595e4dc95b391a0566bc8c9d32d352c205d0f8ae19d3842f6d914f0b696f98e2/analysis/','33da4a93916af6034463aadbda97ad18671d45e1','5a053eb4538a0553889651ea7b54f590','595e4dc95b391a0566bc8c9d32d352c205d0f8ae19d3842f6d914f0b696f98e2'</value>
+        </param>
+        <param ref-id="bb2c7ec3-a984-426b-b810-80142e780d79" id="d1115a2e-7be3-40a2-9048-1a9ad4342c11" name="">
+            <value type="data_list">'bcmhooks.resources.dll','CD','https://www.virustotal.com/en/file/3e0d7773c6261d5f54924febec163163e9e434fe1b6cb59daff06dff190987c4/analysis/','0724c43637816b3d39a79bbbe4afe8005c93bbd8','8e1a49e6c6f2a6f707b7181f2546eb41','3e0d7773c6261d5f54924febec163163e9e434fe1b6cb59daff06dff190987c4'</value>
+        </param>
+        <param ref-id="d47d122c-11f2-42d4-9343-f90252559420" id="cd8f46d0-1297-4138-b2e4-c9a4c036124c" name="">
+            <value type="data_list">'BCMHooks.resources.dll','CD','https://www.virustotal.com/en/file/3e0d7773c6261d5f54924febec163163e9e434fe1b6cb59daff06dff190987c4/analysis/','0724c43637816b3d39a79bbbe4afe8005c93bbd8','8e1a49e6c6f2a6f707b7181f2546eb41','3e0d7773c6261d5f54924febec163163e9e434fe1b6cb59daff06dff190987c4'</value>
+        </param>
+        <param ref-id="8e99e04c-6802-462f-80e9-d256dc012172" id="3ed03d06-ff3e-4966-985d-0cde5cb94592" name="">
+            <value type="data_list">'BCMRes.resources.dll','CD','https://www.virustotal.com/en/file/80ea72c70d8de5e111d4be5fa7515c0b35bbdecc2a4997c2930e918bc263c4c1/analysis/','4780d4daac7f4a74ded784571e7bf3e245bff7e9','9b71c1e2b8951da4690ef05eecd67770','80ea72c70d8de5e111d4be5fa7515c0b35bbdecc2a4997c2930e918bc263c4c1'</value>
+        </param>
+        <param ref-id="c8cfd229-09b8-493c-9fe8-237adde6d127" id="dd867788-e13f-47c4-b840-ed17c296b046" name="">
+            <value type="data_list">'BusinessLayer.resources.dll','CD','https://www.virustotal.com/en/file/1c83f67e338502f500d131e6f69c40a23ba4cf94e38e050de578733cd397126b/analysis/','224aa1856ead0722c5d5287b46dd32d1fb111371','357df22e4e92681e4f7fd0168caf51ae','1c83f67e338502f500d131e6f69c40a23ba4cf94e38e050de578733cd397126b'</value>
+        </param>
+        <param ref-id="cf3ec3fb-df15-4c1b-bc09-8268bdd71779" id="6c362e4d-78ba-404f-8ed6-1b010728e0cc" name="">
+            <value type="data_list">'codec.dll','A','https://www.virustotal.com/en/file/fb3b9464e866b35b3d7a3b506f967b32e1c2015e0703780c89993ce6d50a0ea6/analysis/','1351e784ebdffacf0fd143c07581136e94ca2319','48d638a3194f8740d9f05faf62670ff9','fb3b9464e866b35b3d7a3b506f967b32e1c2015e0703780c89993ce6d50a0ea6'</value>
+        </param>
+        <param ref-id="66a1efb1-4489-4484-b0cb-adec26734592" id="84af62ac-85ec-4bc8-b2c8-120e0acd7d0c" name="">
+            <value type="data_list">'core.dll','A','https://www.virustotal.com/en/file/957fcc2d137e9164635831dd0ab8bca8079ec8b1a4c2eb6e8ac254c5732b025b/analysis/','a3a7545333638ec13ad33af6c4ec32a2d4f56c5d','9bce542aa3fdd21c63e18d453ae8039d','957fcc2d137e9164635831dd0ab8bca8079ec8b1a4c2eb6e8ac254c5732b025b'</value>
+        </param>
+        <param ref-id="79615091-5ae3-4859-96af-52dc130eee95" id="8170b2ee-d291-49e4-8695-2e4386f07861" name="">
+            <value type="data_list">'cyggcc_s-1.dll','CD','https://www.virustotal.com/en/file/bdb971f13959add3ff1f61c2e1ac4368f7a706bec401b8bf81904b27fe6e59fe/analysis/','1ced2955164b7492fd6ba609c504cfd5107aa98d','b517ea5d532c329d82bd0bb8a8239c21','bdb971f13959add3ff1f61c2e1ac4368f7a706bec401b8bf81904b27fe6e59fe'</value>
+        </param>
+        <param ref-id="0cc03bc9-5386-4502-a081-dbac6951bc7c" id="1a7a9188-2eff-4416-a3f5-d33d336c36a8" name="">
+            <value type="data_list">'dll64.win32','A','https://www.virustotal.com/en/file/bfb2ac272617e4af5ddf176bb4bffcc090e47b1208f4285a7108d6a59ec51837/analysis/','4437315b462fce721d16edbe77362b0e634aa559','33f2a0070170ab861e92435114db52d8','bfb2ac272617e4af5ddf176bb4bffcc090e47b1208f4285a7108d6a59ec51837'</value>
+        </param>
+        <param ref-id="c5c84075-045c-4e49-afe3-f173e57e5307" id="b50713d5-6cea-4281-8066-d58d47bfbdb1" name="">
+            <value type="data_list">'DynMenu.dll','CD','https://www.virustotal.com/en/file/ddf1371ec3cafedd2caacfa351e9be77e9dbf263f143d6f81a6202e4303ac8d8/analysis/','c281e6eeab03aa06784f21206c86f2b30fec1dc7','145b5fe784160a39877eddc6e7629155','ddf1371ec3cafedd2caacfa351e9be77e9dbf263f143d6f81a6202e4303ac8d8'</value>
+        </param>
+        <param ref-id="afee74ba-c61f-4fd1-b952-634be8761954" id="1384cf4b-d05a-4459-af4e-8c3ed6e583a2" name="">
+            <value type="data_list">'elevator.dll','A','https://www.virustotal.com/en/file/fc609adef44b5c64de029b2b2cff22a6f36b6bdf9463c1bd320a522ed39de5d9/analysis/','b7ec5d36ca702cc9690ac7279fd4fea28d8bd060','56eac983a8caa8c0037c6ba25e9a2d9f','fc609adef44b5c64de029b2b2cff22a6f36b6bdf9463c1bd320a522ed39de5d9'</value>
+        </param>
+        <param ref-id="287d917f-965f-41db-ab31-d3fe4ae9b1fe" id="6165c7da-8bcd-42f8-99fa-22bc8cfbbfea" name="">
+            <value type="data_list">'H4DLL.dll','A','https://www.virustotal.com/en/file/d9c55606c757e78940c3a22fc25ae12ed93a68c9f88983e58cd4795047504246/analysis/','e113e2904aaae7aa5c2438fea757846cad8a7e9b','aaf26a0477841b45969fdce35bd2e1e1','d9c55606c757e78940c3a22fc25ae12ed93a68c9f88983e58cd4795047504246'</value>
+        </param>
+        <param ref-id="010436ac-6d29-4fd0-9240-f70d38fe9c5e" id="984b6108-514e-45e0-b5d6-91ca330b617d" name="">
+            <value type="data_list">'H4DLL_NonStruct_Kaspersky.dll','A','https://www.virustotal.com/en/file/a61c9ae6ac4149619f058a09b83e7ba16bf6bf2492201fa299c25495ef01ba30/analysis/','83852d86836e9d2193067919815418972e5cc03a','32d9d4da5e7b99e2d70200d14003e830','a61c9ae6ac4149619f058a09b83e7ba16bf6bf2492201fa299c25495ef01ba30'</value>
+        </param>
+        <param ref-id="94a13fd1-8f91-4d4c-aa80-cdbf5525f669" id="254ad7d3-ef6c-4f8d-bd72-8a00ddc160b6" name="">
+            <value type="data_list">'H4DLL-VISTA.dll','A','https://www.virustotal.com/en/file/5f6bc6573d006609d1f0b5c3d051dc6eb5b30dbc60c4e2e7c7b6826434c6a59b/analysis/','d89f0d3e65532a41615d0ee21f2b2379eb0b27d5','738cf6db1f93006967ed1aeef87c6ba6','5f6bc6573d006609d1f0b5c3d051dc6eb5b30dbc60c4e2e7c7b6826434c6a59b'</value>
+        </param>
+        <param ref-id="8213310d-11ca-4ff8-9065-58c19f5915ee" id="b4d07252-f0d2-4aa8-a7d1-246080623db9" name="">
+            <value type="data_list">'Mpk.dll','A','https://www.virustotal.com/en/file/9f3673b51a622dbe8ea5f92ad37ff12ed0a03ff5c30a9ca20575dca08c624fa3/analysis/','0540e5eacd37ea3285f8a239dd72e3e7e4faf33e','f713c1e740d67292db2d96c7755a63bc','9f3673b51a622dbe8ea5f92ad37ff12ed0a03ff5c30a9ca20575dca08c624fa3'</value>
+        </param>
+        <param ref-id="65e75aff-0bf5-40c1-83c9-2de279addb9f" id="7a16a0ad-e0db-452e-b711-5cd420ae3dfc" name="">
+            <value type="data_list">'old_cert_elevator.dll','A','https://www.virustotal.com/en/file/fc609adef44b5c64de029b2b2cff22a6f36b6bdf9463c1bd320a522ed39de5d9/analysis/','b7ec5d36ca702cc9690ac7279fd4fea28d8bd060','56eac983a8caa8c0037c6ba25e9a2d9f','fc609adef44b5c64de029b2b2cff22a6f36b6bdf9463c1bd320a522ed39de5d9'</value>
+        </param>
+        <param ref-id="2b241467-7230-4540-9778-724762a49299" id="8d57d0c3-6517-4291-87d8-fff6c46060df" name="">
+            <value type="data_list">'PMIEFuck-WinWord.dll','A','https://www.virustotal.com/en/file/ad55c2dcf7e3373ea074061d119c891b34e4364cd7f5f679b475b5ec3371592e/analysis/','d2cc4bf197b9d408bcec69252725bbcdb516308c','b58e692d0558ba1b9cfcdda2775c7fac','ad55c2dcf7e3373ea074061d119c891b34e4364cd7f5f679b475b5ec3371592e'</value>
+        </param>
+        <param ref-id="a410784f-8b0c-42e7-a99d-e0649a0086a5" id="d06f9057-de97-40cc-b544-58212dbb51b0" name="">
+            <value type="data_list">'RCSMobile_2011032101-debug.dll','A','https://www.virustotal.com/en/file/6d22dbb5285391be5dcce7a2aed9f14b7ef57de90fd5b02d4bd7ba07d4a5d455/analysis/','9cfa6d066024a458e133fb9cfbafbdfa0b1c64f9','63de9e55e07f81e6d38eb859483b103d','6d22dbb5285391be5dcce7a2aed9f14b7ef57de90fd5b02d4bd7ba07d4a5d455'</value>
+        </param>
+        <param ref-id="ce1995fc-09ce-40b2-96aa-3566ab87acc7" id="762c9474-68e5-4945-aa47-fce7acbf80ca" name="">
+            <value type="data_list">'rcsmobile-2012013101.dll','A','https://www.virustotal.com/en/file/5e75e0babe92f1a7691a43641fadb7be84d4d273b8bcc6cce5dfeb5523a6b709/analysis/','13b20e7945eb7342540b5fab2eb2f03063518239','0df77ac381a54c34bf3f12d13f516be1','5e75e0babe92f1a7691a43641fadb7be84d4d273b8bcc6cce5dfeb5523a6b709'</value>
+        </param>
+        <param ref-id="9a5a038c-875f-4232-81f1-a49c1766cc93" id="71b5b4b3-a0fe-4142-8e5c-7778d63fea13" name="">
+            <value type="data_list">'setup.dll','A','https://www.virustotal.com/en/file/abbac3dda22f825197dd65b8c1076c5ab8d7ecaa2ce2821b242f63154eafce3a/analysis/','f9860169568558df2eb06b9a7ab9d0a89f45cd44','1c5764dd71b9109dbbcd83201be2ceae','abbac3dda22f825197dd65b8c1076c5ab8d7ecaa2ce2821b242f63154eafce3a'</value>
+        </param>
+        <param ref-id="406bf158-33b1-41e8-8972-e064efb2db80" id="3b224aa8-88a8-48cb-bd73-10ebe27fd316" name="">
+            <value type="data_list">'SmsFilter.dll','CD','https://www.virustotal.com/en/file/f3caf8fac708bf3a4ea0511e06849a169e020bdf19c0f8f526abce0b3951fa42/analysis/','4be90804476b2833fe6afcaba35b07ecaa522a2c','44a6cdacf598a7905401b4f32d13eb41','f3caf8fac708bf3a4ea0511e06849a169e020bdf19c0f8f526abce0b3951fa42'</value>
+        </param>
+        <param ref-id="1e2fb2bf-fad2-434a-a0ee-9f706b4f4f39" id="4e1faa64-8838-4144-b3df-a6cc14d9b7ff" name="">
+            <value type="data_list">'sseIdrvdll32e.dll','CD','https://www.virustotal.com/en/file/8ee48f42bcc3006d84ac7230f8a3aa811bbe1c0d5120573638c5ffe41af15fe8/analysis/','ca5ddf4b72258eb3c3d49a4511858ea4a2c18653','0f5817f32ff94351ed4133be59b319b9','8ee48f42bcc3006d84ac7230f8a3aa811bbe1c0d5120573638c5ffe41af15fe8'</value>
+        </param>
+        <param ref-id="855b358f-70ef-4fa4-89da-ce8719663344" id="188f0328-2685-4f21-9ea9-5ab91ff37a04" name="">
+            <value type="data_list">'ssePmxdll32e.dll','CD','https://www.virustotal.com/en/file/b26d39d79b068a7d13fe3526f29bb26165b518fca3b0baf28ad0daa8ed576e85/analysis/','cdf2e2fa4d33f7e9813bd4f900ae321c5605c1d8','d40c814ee7918bf836f4ef7fe065e2f5','b26d39d79b068a7d13fe3526f29bb26165b518fca3b0baf28ad0daa8ed576e85'</value>
+        </param>
+        <param ref-id="dbcccc7b-8843-4a79-bbf0-0a8320c8dc26" id="6ee2009b-47ca-4f05-aa10-f2a5444091d7" name="">
+            <value type="data_list">'VMProtect_Ext.dll','CD','https://www.virustotal.com/en/file/e4c4086b2cd79453fd7a25db4c079f4ff1d183947499fdd4961f5df8d60a1c6d/analysis/','56d62fae86162da2fd798dbc8eeecb088c7c20eb','7c43361c94bddf46c991eb83d9955596','e4c4086b2cd79453fd7a25db4c079f4ff1d183947499fdd4961f5df8d60a1c6d'</value>
+        </param>
+        <param ref-id="bdc4225a-ab34-43fa-a2cc-6bb655646cb5" id="b72b4914-d413-48ce-ad13-33946aa5320a" name="">
+            <value type="data_list">'VR2.dll','CD','https://www.virustotal.com/en/file/5af63dcc0c0330a2de8e4a3f3756e7951d2ce02655f94eee77682653eb6ae949/analysis/','e904dca98c2fec54b8c07befefa4b65c65058f75','2fe29513b40eb73e122285513d91ff04','5af63dcc0c0330a2de8e4a3f3756e7951d2ce02655f94eee77682653eb6ae949'</value>
+        </param>
+    </parameters>
+</OpenIOC>
