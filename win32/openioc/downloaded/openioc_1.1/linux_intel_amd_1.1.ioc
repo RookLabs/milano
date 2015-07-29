@@ -1,0 +1,1405 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<OpenIOC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://openioc.org/schemas/OpenIOC_1.1" id="09b2d0b9-62bb-4031-8172-9816440fa0be" last-modified="2015-07-29T08:29:15" published-date="2015-07-29T08:29:15">
+    <metadata>
+        <short_description>Rook</short_description>
+        <description>
+            IOC
+        </description>
+        <keywords/>
+        <authored_by>Rook Security</authored_by>
+        <authored_date>2015-07-29T08:29:15</authored_date>
+        <links/>
+    </metadata>
+    <criteria>
+        <Indicator operator="OR" id="52e0e239-ebb4-4401-8e3b-b87bc46b1162">
+            <Indicator operator="OR" id="1bd607d6-8cda-40a1-8895-d39846b6bffe">
+                <IndicatorItem id="6d18980d-258f-4565-95a6-1d34c80f1420" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">a.out</Content>
+                </IndicatorItem>
+                <IndicatorItem id="b695f835-8a3e-4a72-a66f-74b4ac90a078" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">e5484c1b27218182d95f5658e3963b60</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4e19dc26-c28e-4ed5-a402-dbba8e2dde56" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">a858f9a5c92f9d56a6fb60e62a3a98455ff45f5acf0eedf0079df845635964ee</Content>
+                </IndicatorItem>
+                <IndicatorItem id="2c2583c5-8f89-442f-8b01-47107e9c720b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">144cd75464dd5fd7f8043085c6ace32fbaca7d71</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="24a32507-bd2d-4f90-89a9-c35716f35541">
+                <IndicatorItem id="873ef6b4-5ad0-4001-8f44-4770df93557b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">a.out</Content>
+                </IndicatorItem>
+                <IndicatorItem id="b8f0bb02-f3cf-4c72-abd8-168cab1ed705" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">0969892f14e93d8b78a0ef4f6e69d6db</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4c08a0e1-5ddc-43ab-aff4-e43b2e20ef65" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">dae6ec4e3567cb805af50a5d4a8adee42f0f0c703eb02af948fd64a99df04e37</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4ae19ffe-e831-4f51-8cca-946eb47bf363" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">ba2ac4338c8a3c39c087bee1e221655f3e0edc53</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="0ee25bfe-42a1-45c6-99fc-115506279bfb">
+                <IndicatorItem id="9d8e41fa-253c-48ef-ae52-50966f5df787" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">bbproxy</Content>
+                </IndicatorItem>
+                <IndicatorItem id="446761c9-7315-46c1-8c02-8d93f72bc07e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">01d11a381b5fdadc2e685b568b7d9f16</Content>
+                </IndicatorItem>
+                <IndicatorItem id="8f1eee36-604c-47be-8b8d-fb40ca484a84" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">66bd82f5ac2c7d976d5ede73b3019509ae3df5d8fc54488d0014f3f41ad0a95f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e1c769a8-944b-4cb5-b155-ab94b178b926" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">e614764d37ced91a0ac2827dc10dc8cfcf7b2de8</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="faa18395-b1fd-4c36-8cfe-bd7460a10f9d">
+                <IndicatorItem id="3ce3c246-5944-4816-b4d7-cd0f9c15e62a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">bbproxy</Content>
+                </IndicatorItem>
+                <IndicatorItem id="33635db6-315a-4c60-9645-5f03145537e0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">69e69fc1e53353c23d4f04f637a96fb4</Content>
+                </IndicatorItem>
+                <IndicatorItem id="627d475b-da67-4c08-ab46-d9d2673d1377" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">2378230b47e6b27f392466b3ebbe520557afe6623eaeaa171195d86c5483939c</Content>
+                </IndicatorItem>
+                <IndicatorItem id="a5592065-c563-4404-bcd4-4b124c5f03cf" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">b7a53478a303f999414a74c4f82827b4156e1c13</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="434ffd64-bd89-43f0-ad6e-a061745532b8">
+                <IndicatorItem id="150fb269-f20c-473f-baf1-a658de477eb5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">bbproxy</Content>
+                </IndicatorItem>
+                <IndicatorItem id="63f03261-8f6e-43f5-aeff-ea64ccf899c2" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">0359e5d4bf9ad60d761eb965cac7a485</Content>
+                </IndicatorItem>
+                <IndicatorItem id="365f08e9-ff13-4fe7-92e4-f1208388c767" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">6662b7842108e2bb2ac2f01653180ea4fd2f36c2c464524e371229cfe9f52714</Content>
+                </IndicatorItem>
+                <IndicatorItem id="62330476-8186-499c-b9d8-f7e7c339c8d7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">9ce469cb98890d503e04b8cfc8bc7c53a828c6d7</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="908c289e-366b-4ab3-a177-537538f831c9">
+                <IndicatorItem id="294d132f-2294-49a1-ad06-8eb698a47ab3" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">bjam</Content>
+                </IndicatorItem>
+                <IndicatorItem id="86413a6c-a283-48fa-adf5-fda19e3480dc" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">b3934270458138fc8e73db6c80f5dd61</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ab2ab525-a5fe-4a43-9769-93197a34c71b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">50046bd74109e71d93890ea68723d7ff1f7dc447198017d0265a79ce0ad27492</Content>
+                </IndicatorItem>
+                <IndicatorItem id="b563ca66-64b8-4f05-abec-e3f921a963e3" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">d7128ff340a2afd719ef5c57f64102dbfb4a2eae</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="1ad8c42f-ac17-4e47-8849-b7133c467c50">
+                <IndicatorItem id="066f9141-f0d9-43d3-9f02-3a645448ca86" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">CIS-oracle-1_0-linux-i686.bin</Content>
+                </IndicatorItem>
+                <IndicatorItem id="78c00368-2de6-4e44-b619-208195ca5843" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">f26afb45ac28e13d19e8944686652d7c</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5b384cbb-77e7-4c55-bc00-6b40667a36a6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">358dacef4eee34bf393c71bbdc7322ce956e105187978edf492cdb553cc48e27</Content>
+                </IndicatorItem>
+                <IndicatorItem id="8029e43c-673a-4421-81dc-9b497ccb3f1b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">26ae85f8a24ec7f807b237ecf01a805a55a0cfb9</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d04a5d8c-dcd4-4ff2-bce2-1045a12f1b56">
+                <IndicatorItem id="5b3b81ed-ccb7-486a-954d-4dfe0468c933" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">CIS-oracle-1_0-solaris-sparc.bin</Content>
+                </IndicatorItem>
+                <IndicatorItem id="aaaedfe5-7ec5-44a5-8c8e-dc8d864b8f64" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">b3b66539b45d17743cb9a39204109fd4</Content>
+                </IndicatorItem>
+                <IndicatorItem id="700a5d8a-b545-496c-b1ca-6fc27f4ca2aa" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">8759a2de00933711fd36dabfffd6fc2fe4d4d29761fb467636b60c164cddb44f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="430204cc-2a51-4702-9295-5ddf5a950103" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">6c08e2ca19ff52076f114c69d84e3b5e94579052</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="5b0306f2-f0f5-4496-9af0-4e82b1a70ef8">
+                <IndicatorItem id="eea536ee-62bd-40d5-b6b5-0f4528233074" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">CMakeDetermineCompilerABI_C.bin</Content>
+                </IndicatorItem>
+                <IndicatorItem id="9cf04269-9e64-499a-a1d4-a76b826f0d48" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">5859475160117d99ef011387873d7b0f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="2e4d7204-2f04-4da7-9ad7-db8d968821ed" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">70a6491c4cad22a50bd0f94c58d758ce49d83a687268ecfad9fa3daf79fac50c</Content>
+                </IndicatorItem>
+                <IndicatorItem id="812bb683-00d8-4033-ba6f-1f26a5654de7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">de58baea95314a8ac423729b789afe2a60a3bb61</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="231092a5-adff-4459-98a3-4523c5b2bff4">
+                <IndicatorItem id="8dcc2601-f925-48d0-a378-a6d08ab90bf4" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">CMakeDetermineCompilerABI_CXX.bin</Content>
+                </IndicatorItem>
+                <IndicatorItem id="0f385f46-aae2-4913-aad6-43357dbbf34a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">bb23a38a68b79c0a3974ed5073648c1a</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f05a86c8-b735-4c5a-b822-a6d0e7ee104e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">b81a3cc3ae37c5dab0b40a58752f88d429bc5c92296ebffcefe555ea99c86c30</Content>
+                </IndicatorItem>
+                <IndicatorItem id="0edf732b-6aac-4c58-8f4a-124bfd14ef0b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">6131141e64ec960e7f3d306bac83b180980f2149</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="fd0c6a03-bafd-4d25-bae8-6f38f667c5b9">
+                <IndicatorItem id="0518157b-0274-461c-be56-3df961dc9a9f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core</Content>
+                </IndicatorItem>
+                <IndicatorItem id="26e45303-0c2c-4bc7-8b0f-a119bee45443" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">adfea399c7bdeceb0a2b09a8df34d2a5</Content>
+                </IndicatorItem>
+                <IndicatorItem id="49a107ca-55cd-40b1-9a32-62b086243106" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">eb67397eb7e825addb295e32d81f45c34c1991f8c993238771f8e868d1d4e2a9</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d8709ef2-26a2-4e0b-a289-321d19a1050e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">34ac4698299c56fa484d7929150efa80fce8bdbf</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="3dbbe9ee-8fe7-4a3e-a407-c7a67ac5ed31">
+                <IndicatorItem id="f35ef34b-421d-41aa-8ba5-7ad26aa5d585" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core</Content>
+                </IndicatorItem>
+                <IndicatorItem id="79127220-b52c-4714-a7d2-ae04d8ef7098" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">3565e1b1a624724b08d66493067eb26f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="3c443953-480b-4396-b4b8-0feb9199ee75" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">c73081ac1b62e2ad3eef196727123eec6ea353f023176effa1ef89127fce62d1</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d29e1682-09f8-452f-8645-78067028fdb6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">8817e872253e1df77de5d044e81b2509e82668d7</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="e634e41b-789c-43fb-aca3-5a6282f8abd3">
+                <IndicatorItem id="96941871-1c21-4206-96ab-53f814c33515" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core32</Content>
+                </IndicatorItem>
+                <IndicatorItem id="00c05ceb-6934-451b-9f59-9e58fcf437ee" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">0a23f9108012e725a94ba934b3f6a077</Content>
+                </IndicatorItem>
+                <IndicatorItem id="11864da5-5406-410d-ae45-cdfbdbbb6f3f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">1ad0024b950a45f483a6c253daea6657c1223c8a1a16479b50ff42bc73aa5856</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f4ec2d1f-fd6c-4133-a300-0ec8c7b75ea6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">3f586474b757d036cc55b195cca767e84a6650a8</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="e579178f-f18b-4aef-b8d5-fdab90b03d04">
+                <IndicatorItem id="d28733f0-ad0b-430a-81f5-15636840a486" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core32</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4c7c7b5a-7851-445a-85a8-83d4a99e75a1" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">229d5ba7ea257839e9e4a6f1d5bdb01a</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1d7bdda6-fd7c-4250-816c-11a8f89e08d7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">073db35a232ba83451864bd4ae9ea8cf40f2c297dc69c8f7ab0773971de6eac3</Content>
+                </IndicatorItem>
+                <IndicatorItem id="85c06ac7-ab27-4cdd-b1c2-f25ca6a9430c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">b424aff06c12a8779a6f832efc3b972298b60cdc</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d6b310a6-9be0-4362-b997-977b42e389e5">
+                <IndicatorItem id="1559c8c3-d4e4-4ac2-becf-ddeef1ad0dd8" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core32</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5d4e25db-d2c0-4036-b4e0-740404512517" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">f6c2f32579361aa9d6fd59198df18040</Content>
+                </IndicatorItem>
+                <IndicatorItem id="98257f5d-59ab-47c6-8624-951f77ff5a6a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">850f6f8e87ad6cb1ddae38241d932d610169e827020e1efe33ddfaddbdbe7a25</Content>
+                </IndicatorItem>
+                <IndicatorItem id="449ebcb6-a18f-4eae-9442-f67bba54933e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">36e363b8f2c9e5a73611d7ef90ea3c9a32a318b0</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="4e5a3630-8de1-4296-9070-e33bcf808cd8">
+                <IndicatorItem id="aa676d02-922e-4011-a297-fdd1c96e004b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core</Content>
+                </IndicatorItem>
+                <IndicatorItem id="9142aa79-6cd1-49e8-bbba-f7c502fa83ea" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">2c60be899abec9726793ec5b8d43b700</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d6a0d353-95a0-4a85-923d-3f140c2b75cf" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">5e2401aa54a1b6ae4704a1e906491a9457f90b81cb6c9ecc47cab9f552ad083f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4a57fbde-143a-4415-91f2-d4588cfef2c0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">46d3124b0b2e1361a2e4670aac8e007c4a92f647</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="f3d3b064-aea2-49f8-9101-16aecb22e4b6">
+                <IndicatorItem id="14b32868-beae-4b93-af17-4a8cff2aa730" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core64</Content>
+                </IndicatorItem>
+                <IndicatorItem id="8d15c07c-f52a-4d9f-a7da-043351390293" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">d352b07dd779ce73e835529ac5dbface</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ce4f667f-a33a-4697-b901-b7dae8cd3f07" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">cd3cfd11255a87c7ed4eb93a6b44330cea03f89620bbaf2a3218abdbdf1afcc0</Content>
+                </IndicatorItem>
+                <IndicatorItem id="23ac6b74-d682-41a1-a77a-b3c96d1899bc" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">f2783b17edbbf6783ca7021d85a9a3075f3e26c6</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="83faf43a-9f66-4ab3-864d-bac7dead804e">
+                <IndicatorItem id="9a9bf81b-579f-46b2-8395-1e8595016ac9" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core64</Content>
+                </IndicatorItem>
+                <IndicatorItem id="67c55b70-07b2-4b96-8824-34b8f2571a49" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">94dc07e93c34170205a6b3c9a63e436f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="6fe3fdd2-649b-4623-a6dc-f838d0c9067a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">3f312838b6d5268edd15d44a8de3b72706d0dbbf6e0b44a1fe8865ac3a00f34d</Content>
+                </IndicatorItem>
+                <IndicatorItem id="dfbba831-f61d-4e39-ac29-3a6dd86d9a51" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">66893e58fef9a97da4b128ff128ba0b7bae5f1fa</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d099eba0-9281-4602-85f3-3065c9c0c8af">
+                <IndicatorItem id="4ec93a3f-8452-4989-88ec-6c8eae5cc267" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core64</Content>
+                </IndicatorItem>
+                <IndicatorItem id="152b3f47-15b9-4de7-bc98-0fa536959803" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">8cc1795a3193e047a5cc3a0e43a0acbc</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1e6a737f-84f8-4f61-b3b7-8dc8cc842c12" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">4575543e49b4df9f108e8f6b06a1e7b99e1ed6b369256111b3d40f9f2fbef490</Content>
+                </IndicatorItem>
+                <IndicatorItem id="28c8721b-51b3-4a64-8d37-536c05348f2c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">36e2dc024d1b93ecf25d6eaed5e2f780227037a4</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d52181c9-3c67-4e0e-b5ee-7ce3a53131ae">
+                <IndicatorItem id="9cef8c0b-4661-4ba8-8829-5e3274156040" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">core</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ce90d2c5-4ff2-4ff4-a5e3-021c917f5ab8" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">09849dc10f9a20535c448a5e522835bb</Content>
+                </IndicatorItem>
+                <IndicatorItem id="2eecacf3-bead-4907-8869-5d4351d19b3b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">96fd36fdba57b8426d154ad429194ec669b6e0ca3d61ebf9b0d00cacc29b450a</Content>
+                </IndicatorItem>
+                <IndicatorItem id="7700b99f-85aa-44f3-8a42-e9f5c97d98af" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">274894259da910f5e1fbaf7d50fd9a995fd6396b</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="7beeccc3-e7c6-4d67-a1c6-d30df5606bcd">
+                <IndicatorItem id="7fbeddb2-14de-4c8e-874b-c460f8aacc74" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">device</Content>
+                </IndicatorItem>
+                <IndicatorItem id="65b1319f-f0d0-4093-ab9e-f2011faaaeb1" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">a37477d277d7e498c62de41797b0df1a</Content>
+                </IndicatorItem>
+                <IndicatorItem id="9c9bf9aa-af40-42ae-a7b4-849ed8d628d1" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">0252a86ad1f9df2940f17dd2e2297eb1e7fb16d51b86be91cd39a7e1571ead61</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1a6c70ba-42ea-4c3a-a01d-89667d441d88" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">88e138c8068221f46aa5f86e0b41f3f8eab7b2cf</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="66a9e8b7-1fe6-4c4a-8089-840028a977b8">
+                <IndicatorItem id="1e7d5653-f73e-4ca6-ae22-2234204b9338" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">dropper</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5af890b6-8256-4621-a690-de3025d60080" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">34806e3da24a838d94ccb3679ba91e79</Content>
+                </IndicatorItem>
+                <IndicatorItem id="a28ae170-eb34-407b-8a1d-6822e9cd3d3c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">40d7945f8c10195efb399876bd704a6021c8b89e8697fc43eb4d38b3f6bd3a05</Content>
+                </IndicatorItem>
+                <IndicatorItem id="bf948f48-37ca-4e1b-a7ed-b8c01c44eb37" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">3a5ffad8d297d01534dc079aef2446504bf533ca</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="4a109012-5466-4507-b337-4e6a596f61fe">
+                <IndicatorItem id="b61e019d-8996-4c1c-a118-5a147c319607" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">eventmanager</Content>
+                </IndicatorItem>
+                <IndicatorItem id="30293071-a31a-4ca6-8712-643043c2f372" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">e221c8620f8dae21f79a9b058b07dd14</Content>
+                </IndicatorItem>
+                <IndicatorItem id="99952e09-9499-4380-9efe-7346cc441be6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">7a96db1f883c1f54e437cb6682364589f78e207c1aefb648c87698340fbdb48e</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e1230b86-b35a-49dc-b54c-098899795d6d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">688bb8093c9dc02eaa3fd024c7cf26fcd29ec403</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="f0da36e5-13a3-4d5f-a3fb-c9e26af7d1d9">
+                <IndicatorItem id="f2717a2d-e641-4c5a-bc64-52fbef201279" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">glib-genmarshal</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c1ff5a27-1fc4-4a6c-9319-f8394fc5a172" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">c586ae1648a255e727d39bde64163601</Content>
+                </IndicatorItem>
+                <IndicatorItem id="9b226bbe-ca41-4441-9e00-3759802f52bc" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">07d3b91c92926c723e1796a0d1b9f823dbcb46ef5d62bd0f21235a42e20c3b6a</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1fb34762-dfff-4748-8c72-0a17a3fb105e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">5780b2bd65942c80cf8f056732458752c1252288</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="7b6206eb-f339-446e-8568-115004949059">
+                <IndicatorItem id="feb09f6a-a027-4fe1-baf0-45600a518360" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">glib-genmarshal</Content>
+                </IndicatorItem>
+                <IndicatorItem id="27901834-ed43-4a3e-a316-0520887619f6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">251d81e32b710e3aae0f4faa3f76f509</Content>
+                </IndicatorItem>
+                <IndicatorItem id="287caff2-57d5-4952-9a3d-5e15f17a01a0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">3a6ff8835d66d5aa74b0b889b2f7066dfdbcb86d8a2f486177ae0d9a1b2d07ab</Content>
+                </IndicatorItem>
+                <IndicatorItem id="6073078c-b4d0-4833-a39b-7791745ca40f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">a8437617314a41beb7833b64febf4ed480514ce5</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="4aa07f92-1869-4b94-aef1-c70a25479e52">
+                <IndicatorItem id="3bff6514-f6ee-4ea5-8cd5-5a70c8adcc0d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">gobject-query</Content>
+                </IndicatorItem>
+                <IndicatorItem id="b1afd589-3e6e-4bef-a598-e4444c5b4a3c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">d3d5c8633cc2c046a8648deea54a9167</Content>
+                </IndicatorItem>
+                <IndicatorItem id="81454f95-75a2-422d-b9ad-a8fa97fdb112" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">aff97d9d8b6ac8942f63c006d258857c06aca19ab141cb0a264061898dfb73dd</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5a64e027-d97e-42a1-a5b6-d417b08aa520" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">ce7d332c7b7ee469e7bcf06b0187913d04187817</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="eab2088e-ca2e-464f-a7df-cb2ef2d5ae69">
+                <IndicatorItem id="757f00d0-ef91-4a39-a2e0-7cc681efdb11" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">gobject-query</Content>
+                </IndicatorItem>
+                <IndicatorItem id="875ed2db-1454-4b33-b0d8-d6f0bde8e9a0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">29bfc4ec9b3dd0e49ec8647a46cd75fa</Content>
+                </IndicatorItem>
+                <IndicatorItem id="05b9e05c-0de3-4cdc-a951-aabfd539522d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">756aa91b2b4ed0e6303cd1c3553c547742063afb0e588498966bc2d5dcce5215</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ce225372-e7cf-4f57-a40d-f99c8f8cce68" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">a42e7bd8aee36ad4e32cce49b5ff4325db294e4f</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="b8836a6e-598f-4dd1-9293-a9d6520a3391">
+                <IndicatorItem id="b2eee9b1-7a2d-44c0-bc8e-b3fbc0629124" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">gtester</Content>
+                </IndicatorItem>
+                <IndicatorItem id="6d8ea9c3-8458-4d87-9f6e-82dec042c32d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">d18d196653490e78647e5a8bc7686515</Content>
+                </IndicatorItem>
+                <IndicatorItem id="862dae20-282d-414a-85dc-aa907dfe64b2" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">518675e2c2d8f2ebc53483893e3319efcdb86d009740f9b1a79c1c919ace38a9</Content>
+                </IndicatorItem>
+                <IndicatorItem id="221e0a6c-6591-47c1-9d74-c450f16789d0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">582e1954768ecf63dab4b1cee852b8d41dd24944</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="83a43e11-d0f0-4bed-8377-4133d5389bbc">
+                <IndicatorItem id="495865c7-3568-4903-b6fe-c885dfe12ffd" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">gtester</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d3d7f5d2-8994-4c3a-89d5-b1ca1d4f9a61" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">5bf53959aa20f2d56875b4ea7a72f533</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e2bc38c4-7a5e-4c4c-976e-38aaecfa8e3f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">f535f9b4888d549887ea06aec39c086eea0bbc9262773f386696c20e1e7a73b4</Content>
+                </IndicatorItem>
+                <IndicatorItem id="691a498a-b298-4861-8de6-5ecf30a7629f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">9d1ec68466443f8983feda8822b12dd35d44cf9e</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="887d3f44-688d-4bd8-86b7-bb22e4890b69">
+                <IndicatorItem id="98df22f9-8bbf-4149-8142-a981f8c95214" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">hash</Content>
+                </IndicatorItem>
+                <IndicatorItem id="bce0400f-2afe-4666-9e67-24ca12a72dd7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">83460ed6801d690ac0a07682fdae92bd</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ff52b7c0-43c5-4ef2-a046-8a4f5e60fed5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">d27cfafb556c61ae71a408cb60098bd4e785fc06ed43138beb0521c63db29112</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d1a8f769-6248-4788-8bbc-c6c59fece0ea" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">b3aef6aec3a8f666492067e01129c7a90c8e2a14</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="621a5538-69fb-4d5f-a906-336e7372583f">
+                <IndicatorItem id="451cbb2b-4ce9-448a-8a2a-d08e3fc35324" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">jam</Content>
+                </IndicatorItem>
+                <IndicatorItem id="9b52592a-4066-4c48-a1b0-520c8a4f3f1d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">f1212c7fb858ea8e3738850106751727</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ae2f48b3-bb4c-4d50-9171-3c40d613c9b7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">e1df8e8c2158cf18a48e5872f9daf0d3d11a883e6fa2571bc99a0ed1f398ed7f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="bd441616-73d7-47df-808e-12350b4746b6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">9d856a8214a0132e212cb2da7e83e725def68f1a</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="b26758be-38e4-44e3-a7e4-2b5b92ac6206">
+                <IndicatorItem id="d531761e-086d-43c8-a347-7b509f4a43cf" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">keygen_linux_binary</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c2edbe14-9dd1-4793-afe9-ec19794a541f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">21122e0df14afc90e1d760962bbeb21c</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f8d07d80-814d-4920-82d7-3ce28042dae2" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">c6ba837c2857e6533a8150e216417c00bb6466772afb104ab80f720f6d7b864d</Content>
+                </IndicatorItem>
+                <IndicatorItem id="cbc6349c-13ac-4746-8645-f48f5791cef2" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">9f489c15ba850271f082ecf96ec6bcba4884ac10</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="68f4bb17-c10a-416a-9760-c44b8c2a7490">
+                <IndicatorItem id="db617e3a-f085-46c8-9aa5-9c49460485fa" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">keylog</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f5995021-baf9-4b10-a40b-a2769d085470" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">760418af814f5f79b3fd69b2a8b52991</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c4ac357b-7f3f-44a6-b71a-aea8bb467ce6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">9215fc637e018d19e93e8529669289d03b72b2c1662a6f2dcdcfbf24ce7ff9bf</Content>
+                </IndicatorItem>
+                <IndicatorItem id="191f6a77-97af-46f0-9a3c-6b52ed090a55" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">2974bc369f515024ac89b6c2b51c4f60851877ed</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="b26e1b40-5b5a-4584-b6ee-c4949372a629">
+                <IndicatorItem id="414d799f-fa62-4517-9997-ec6485c6024e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">linux_server</Content>
+                </IndicatorItem>
+                <IndicatorItem id="484c1910-1bcb-4d36-a677-c81e44d37f5a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">eabe761b88eb92f1d096a08d0ff97263</Content>
+                </IndicatorItem>
+                <IndicatorItem id="42975585-ea90-48cc-9d52-99d6bb3307a5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">f408b207447dbde3a97de5d05fd3225580d6dbcf5cb3cbd03a45b07327e57ac0</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5893b232-cb29-4ca8-bf6e-8d4052d5b4f6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">e4acb26724915b4ecad6cf5e3a45568b68d0ebc4</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="4fbf5e42-169d-4161-ae22-1de0688c065c">
+                <IndicatorItem id="f68ef72f-8f1d-4a13-b238-1623fa9939bb" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">linux_server</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5d3a4380-8fe3-4dee-8db9-5e4e3f170832" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">a431477b2130774572b2cbb46dd9505b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ed77fcf5-b228-46d5-bac3-b08c267fbf1d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">a4b74c6d42d863e290ff361b0382bf19e66eb9f9ec9861d899620102814f2c29</Content>
+                </IndicatorItem>
+                <IndicatorItem id="373720c8-5538-482d-a3ec-f55d4ab25c1f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">670b2087b9fa19c8190e0cd7d12ddf748b4fd67f</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="566f81f9-ec14-45cd-9356-2a80ae673bc9">
+                <IndicatorItem id="05a81b4c-bbb4-437c-b214-3e777be8ab78" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">main</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c84eabfa-e92a-4a6f-860a-66736490f687" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">769359fb1e32a3e85347cd6efd4f0778</Content>
+                </IndicatorItem>
+                <IndicatorItem id="cafd5f8d-9f08-4b80-80ad-798273596531" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">38907f006018614e57bca99b3bd32d4f3cc6d4ee11adbd4549523d555aeaaddb</Content>
+                </IndicatorItem>
+                <IndicatorItem id="078dd570-affa-4f6d-b493-e3ffb5bceb3b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">c3b02f2995ef3f7633a822bd32788678743a63ee</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="e1c289b2-262a-43f7-81f4-05f3e4466a1a">
+                <IndicatorItem id="fe646507-4870-4a6e-a07d-b15c9f47193d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">melter</Content>
+                </IndicatorItem>
+                <IndicatorItem id="00f61c8a-0076-4517-bc0c-2c75caa0efb7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">eda91588e6d7941410c25bb6d0a483f2</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4209c56c-0cf8-42d0-9163-8d381c6295ef" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">a70e9b407740c30d87bcf4495ab74816bf732d25927de50a424a15db0fceab2c</Content>
+                </IndicatorItem>
+                <IndicatorItem id="459a4763-0dba-4c33-b64d-4cf67f5e8f90" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">b6729db320263dbca2cad46d59a4addc5babee1a</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="2fd5d1b6-94cc-452f-becc-c06d37710e18">
+                <IndicatorItem id="a6303e72-9aca-4fd2-a85d-ad823fc6e7f3" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">obf</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5e5b46b6-c03a-485f-bcad-c33ced89cab8" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">70238935e39c34c8299ab5dbfc60006f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="6fd132f1-f9d1-4c7d-945f-f1f2b6f6e023" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">217854e1fdffe8b6917a7fa6e011fbe709837b5ccc6ab8c3323c29ffb7dfa00b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="7055b4ca-a9d8-4588-a472-525fa33abe50" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">b7b1305d0aaa74a6008f77d0b52e698760596849</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="80626a8b-df56-4264-9eed-a756fc7e775b">
+                <IndicatorItem id="3fd254b9-2f34-4209-a8ca-4da9e559548c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">obf_sc</Content>
+                </IndicatorItem>
+                <IndicatorItem id="270bbf21-e121-4929-ba22-29b1d648512d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">f034985cf944ac5354fa58b0a4f5d2ed</Content>
+                </IndicatorItem>
+                <IndicatorItem id="21fcb303-cb44-420d-9c58-9c9258dd0b09" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">4560b4e511ea8332861d58812a122f1463e84b40ce038048bcf40539a15851fb</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1f9a7a7a-8566-4c71-b27c-2068c62c007f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">bb9d94dd9dd223ea5799076535be3ef81a3f8bed</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d05797c8-e00b-4b3b-8883-f4d02be2ddfd">
+                <IndicatorItem id="8087247b-741c-46a2-b847-1ddd98f6ab33" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">obf_sc</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4e9be73d-e85e-44a1-abd5-7b2cefb95905" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">b91a5318d588f292bcc17e9ddf3a1d91</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1aad8c7d-da57-46d7-b477-d3140395ecd2" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">a49150dfe0f147e7bbbad2deec904ff1f453809f9f0d5f8809a988abd625ff15</Content>
+                </IndicatorItem>
+                <IndicatorItem id="161e3aa7-c150-4f97-88d1-41674e6b12a9" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">de88872bd5b72972f8cfcf003a00e384995376b3</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="43b388f2-b9f5-447a-ae17-f5e4fa9a3dcb">
+                <IndicatorItem id="01f870d7-662b-4eaa-9744-83e35c4f3c91" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">obf_sc</Content>
+                </IndicatorItem>
+                <IndicatorItem id="3469a701-84dd-4c3a-bdc4-f5a8a8c7cc8a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">a829fb1fa5ab3406b4fa16795551bde1</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f146554b-a3c6-48fe-9647-de55d23184aa" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">c5a6f33d0fd578d6b493126b190091278ac313712328e527876ca5c412e4b5d6</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5a9956d4-8a45-411e-8311-2e21fdb72009" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">c2222524079d11f0d226f66e605aa5655cf1580f</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="f7ac4f77-39aa-4e53-9e31-e4a18a7beb84">
+                <IndicatorItem id="71042428-c377-4270-929a-1a7e6d795b15" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">rarara</Content>
+                </IndicatorItem>
+                <IndicatorItem id="9326560a-3a91-45ad-ab6a-ae4cfef461f3" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">1b4b314eafb12b1bf9e08beeaf99f4ac</Content>
+                </IndicatorItem>
+                <IndicatorItem id="3b163c85-97b9-4d7b-9be1-12a50c220dfb" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">d6545cda5027c87a44e2a616ef993cdad1904e2eb6d061d6ef8bd485516d0da3</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ec7f1fab-8464-4ec8-9c1f-82561010fed3" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">d30e524f0d6ee7f9ae4fd57ab3eb5d28a2afff2a</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="6631dd43-d7ee-4429-827b-277db331b448">
+                <IndicatorItem id="49b551f1-1764-44c5-8ac9-fb738c122b5c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">rcsanon</Content>
+                </IndicatorItem>
+                <IndicatorItem id="8b0f9a32-b2e8-4b94-ac46-2b88a534e25d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">54f252c1664b199384118ca4bd6a5430</Content>
+                </IndicatorItem>
+                <IndicatorItem id="93a3b3f1-3a06-4b9d-8103-14deeb9c966a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">906e68614b03f886654c83d21fb9209113805f9a766c962535a85631ecb29945</Content>
+                </IndicatorItem>
+                <IndicatorItem id="8af04d94-aaca-4530-a567-c0feee0bb9bd" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">4bbb7aa36d10f61541384efa4ffe8af0ca15d965</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="1db2bcc2-bcb0-46de-9562-89972b62c123">
+                <IndicatorItem id="909717c9-f821-4d50-aeae-dbf193775c69" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">rcsanon</Content>
+                </IndicatorItem>
+                <IndicatorItem id="011e2f20-9fa5-4d56-b4e1-0542282ec0a7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">4c8c18b777768c29e0e461e5bafad8a9</Content>
+                </IndicatorItem>
+                <IndicatorItem id="7fe54770-1ac6-48b5-8512-86f5faa63e1d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">1a199cc53ac508ded68c573b9acd6b646ff75623264802281bcb9f0eb6fab1d9</Content>
+                </IndicatorItem>
+                <IndicatorItem id="a457cf53-1242-42c9-9827-55dd42beae9f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">47ad4c1aa171900b2bfad3f4b669de3bda053750</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="07cecd5e-8e06-4437-935a-4ce1d990758d">
+                <IndicatorItem id="b687c3a9-6928-4d55-a36d-7464451f162f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">rcsanon</Content>
+                </IndicatorItem>
+                <IndicatorItem id="84886c28-4d6f-4c54-b848-8e766b81614f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">342ea1f738cec360c7b0d61c2000095b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ff7e4262-a8e5-4655-ab26-be570f51b337" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">28f1ac0a1b2c6413947a742c92d3a9fe6e81d0bfcce6a686bef822943a19f253</Content>
+                </IndicatorItem>
+                <IndicatorItem id="6d399563-84e6-459f-bd12-b5d72bc2b7d2" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">c640b4a1e3c85bc7b977088a40344bde3368cdec</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="47cae17d-cfb0-47fa-ba23-fe16b077e8a7">
+                <IndicatorItem id="2d96e6d0-b2fb-4542-85eb-77adfea32fc5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">RCSRedirect</Content>
+                </IndicatorItem>
+                <IndicatorItem id="af8fb841-a3e8-41ee-bd77-98a025cd5236" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">d7ff8c601818dcd5f1b5c6457e36ac67</Content>
+                </IndicatorItem>
+                <IndicatorItem id="7931c141-7d7f-49c4-b5fa-16753ceb424f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">08348141224e6abe0a2a3433c9f266216bffb89e98a1f1bcaea05680c7be0225</Content>
+                </IndicatorItem>
+                <IndicatorItem id="92a2c9fd-9374-47e6-bced-752c47b5813e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">3d0e54ef7bb34ee66a1c2713e06e0e9d8d3e9bd4</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="adb5f037-46bf-446d-9ad2-b19c00398640">
+                <IndicatorItem id="e90cde6b-8a41-44d7-ac7a-887bc2a04844" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">smbclient</Content>
+                </IndicatorItem>
+                <IndicatorItem id="7425a8ff-72a3-49d1-8726-c8e4bf872881" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">c8987f14c2f0e3cffe319a6e561724d6</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e538e0dd-a7d4-4a7a-a4f8-9fde78180f93" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">809e52604d171c6e37ff90c8d948818f5690da1fd64c98443f04c00b25e51616</Content>
+                </IndicatorItem>
+                <IndicatorItem id="9a33b92b-f61a-43b2-846b-469e4f96cd28" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">56aa0a3fc570779c9c80f63b9a4bdac98d241b87</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="477f4dae-9ee8-425c-9342-3794d3589d0d">
+                <IndicatorItem id="0ca8177f-a31a-4b28-bcf4-6e4bdb2ebb40" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">sqlite</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4a2d4767-21c6-4f5c-80f4-cce260838223" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">257e89974ce052e6433a19d2606f384f</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c9f54e1c-604a-49e1-a4a9-2e9fec4b3a8b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">91d81e6580ea634b8382c6d3c58d1b14102d2cb88d2b7277cb383ac60922c911</Content>
+                </IndicatorItem>
+                <IndicatorItem id="97ba13f5-0cc2-498b-b3a2-9afc3a0b207e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">ba6bb5e958020aef5d702cf6b4c18623cb36484d</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="46f1c98e-f5b2-47eb-b5a8-a06b22f3c60b">
+                <IndicatorItem id="dcb3faff-2d6f-4654-bfc8-b35279c158a3" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">store</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d204f6f0-42e7-4afb-9eef-330b4a76727d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">e9bae7ff01b693d22e09958e34eae648</Content>
+                </IndicatorItem>
+                <IndicatorItem id="fcec57af-674e-49d8-a10b-8bcf78cbf756" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">b142218fdad7498708b2369ffa19a02f02c04f08a554b9de5ea28205c776dd51</Content>
+                </IndicatorItem>
+                <IndicatorItem id="543bac62-e266-45c6-85c2-51705a45ea95" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">e6793e0b2e8dbf9ae7720aafecfdfc242985f6a6</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="d451db3a-a852-43b6-8697-21020f085356">
+                <IndicatorItem id="7c3d37d1-41cf-47ea-9052-ae3b1692e30d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">sudo</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d813a11f-1d19-4071-bafd-b4dbe8a95233" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">a552a79a843a5b533bd3dafd6f937574</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f21e7750-1505-4830-9276-e5b9cc83e165" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">379ee45ed055674122436d6eba89680bd7241f4b4d18ecf31256b683496475da</Content>
+                </IndicatorItem>
+                <IndicatorItem id="7dc00e12-e3c8-4b2b-b510-18dbaab20a13" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">7c08a8a10760e9ada2313e6192fc02a3691b405a</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="cd46a10b-507e-405a-ae86-92dfe87de11b">
+                <IndicatorItem id="27b9764b-8fc0-45b7-a0a5-01e728431857" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">sync</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ad450ab1-4bb6-4d35-9d12-945466619f10" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">dd4b1996983c2a57e8306df2eda8ac8d</Content>
+                </IndicatorItem>
+                <IndicatorItem id="522c5bfa-d043-4e4f-9fc8-58859982d03a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">42fd2064ef61aad7a41b170b46f711d336594c39b16b89d8d4c5a2caeefa2e6c</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ef20ec6c-2c5d-44e3-9883-93b2c1fbc9b7" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">ab41edd2dba631981537ac76fc38c16c6e34f79f</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="174f704e-6f75-4984-8308-5404ec922d06">
+                <IndicatorItem id="64965503-7a1d-4bf5-a622-15ec94963da8" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">sync</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4ade538c-d05d-47b9-a76e-4d06d4c46672" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">b3066ac8ca54a2fd80d676afb867350b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f5e91d0e-4125-4a72-8cfd-68826e096b60" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">d9f5ed16c9a7354dd6466a63688cfc22b964edacf861efc8d7b2dbf1e5604616</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4c5371ff-88fd-4225-a951-dd8193ace895" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">9d0c576607a90c31ec6460b5a88da57cf70ea014</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="3a9c1277-88fd-4094-be56-04c62e0e8674">
+                <IndicatorItem id="9c37ee9c-4f42-414c-a009-90b1181ba324" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">test</Content>
+                </IndicatorItem>
+                <IndicatorItem id="39778668-5896-4be2-8882-27fbf6ad25c4" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">8955fcc78b51aa449b76e850ba0ebdef</Content>
+                </IndicatorItem>
+                <IndicatorItem id="b329457d-5a56-4e1d-b1b9-bb41be765d1a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">2fc3cfa846a4f00ecb863f4e7187d66df1583b42f6a9ce53f4ec170621ff68b7</Content>
+                </IndicatorItem>
+                <IndicatorItem id="989fa22d-b6ed-426a-aa72-91ac9918610a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">231af5c3bedc118070ded3c8fc7e71011b7731aa</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="9dd0500b-c934-4745-95de-1fefbfc0841f">
+                <IndicatorItem id="eb05a5bc-4ee5-44b2-915f-fc2b277d1914" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">test</Content>
+                </IndicatorItem>
+                <IndicatorItem id="2ac3368f-6b80-417a-8de8-057a523a14e4" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">f7bdbc7380f5f5a10f8672ef4f406092</Content>
+                </IndicatorItem>
+                <IndicatorItem id="c5dffcf5-4b24-4691-bdc3-7f5dd7dd3543" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">efd46d292b33426fcee24d64acc93e89d6665c393e7ba27781b2c26093205e2a</Content>
+                </IndicatorItem>
+                <IndicatorItem id="a4a964ec-a340-4d10-8b9e-310adc5d67d4" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">0e1ac9adef15cc5a30d9e29e27082faccf695cee</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="1dca3c1e-a917-4be9-8f62-d0de142e2fef">
+                <IndicatorItem id="2a749f5b-26c0-48c5-980a-b65ff4c0e1e0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">test</Content>
+                </IndicatorItem>
+                <IndicatorItem id="0f6d7ac1-3dfe-4f8c-8cef-aba7ac6c1fb2" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">d99c760ffa1b87801ae8ebdbcd3bfad4</Content>
+                </IndicatorItem>
+                <IndicatorItem id="3a96b86b-763e-443e-a8d1-e564132cd84e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">b1aa9efac39092ef6a2c8ad3a0b6f32e40d6d7845c980baafec84c2bea8bcc4b</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d3194d3c-dd7a-4450-a3b5-68bb16418f41" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">8aba54bdc76a06854be09108dc36903751bda0e7</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="88da69be-7038-42a6-bc8c-c5b2f497d3c5">
+                <IndicatorItem id="de81f617-4da8-4915-9837-4e7e363694e8" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">test</Content>
+                </IndicatorItem>
+                <IndicatorItem id="488539db-6f39-49b2-bedc-c4189cbddce2" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">c88a3737497cdaf89424bf65e2c6c001</Content>
+                </IndicatorItem>
+                <IndicatorItem id="70c82881-d4a2-4a5b-a25a-d1110172439d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">fcffc764e194b64af52d9774c57283fbfe2d1d9a1d685260eebf0d13cae41640</Content>
+                </IndicatorItem>
+                <IndicatorItem id="3a83ac60-dbf7-4abd-aa12-03eade0133d3" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">b899ad87443be6d4ecb059eb148935ccf5273df1</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="428d8454-98c5-4346-97c2-0d454c1e7dd1">
+                <IndicatorItem id="d274c5dc-423a-4243-9110-afe8f935009a" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">tfc</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4e9b0216-67eb-4074-bee7-b1476fb81c79" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">6a2a94868745e6dc05b35f1040b04131</Content>
+                </IndicatorItem>
+                <IndicatorItem id="3015ef31-2a57-41fa-ae56-ec790a7c1052" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">ad2156fecde2f8019f345f0248182cd41c9127e86fd50db9e1c7ed5ea433e914</Content>
+                </IndicatorItem>
+                <IndicatorItem id="0d8192b5-ed75-4954-afd2-9d20fd34c9b1" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">403bbeacd8fc8103bf2d9d0ad6580ab58e4e83a4</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="69728665-e466-4801-a238-10e27b02969a">
+                <IndicatorItem id="55d4a182-070f-4bdc-927e-af9de18f288c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">tinyproxy</Content>
+                </IndicatorItem>
+                <IndicatorItem id="5936de1d-9152-48c7-8a3c-ea50808a551c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">81f06cae37edd53067d69a8c702132ff</Content>
+                </IndicatorItem>
+                <IndicatorItem id="32772fe0-77c1-4992-be2a-e320d0ec5c6d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">06f174c53c80c0e1218a509e58df35de675f79780ec9baad22e9ad16ef54b978</Content>
+                </IndicatorItem>
+                <IndicatorItem id="cdd0565e-d967-419f-aad0-484e3f400b63" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">6bf9ab34d3ea5243cf2be9996e32ba87673d9d95</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="74fa5627-4fc3-4a5f-a12c-c54fa629ff03">
+                <IndicatorItem id="08014aa0-1ff0-46ed-b8df-df5677d037b5" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">unwand</Content>
+                </IndicatorItem>
+                <IndicatorItem id="118c7bdb-4edc-4ac0-ac90-184122c3e29c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">ac6b0a27f80064d017132fbef2493787</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4704bcf1-9b9e-4ba9-a5e5-1cdb71c0d14f" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">69f889fd22e35d905b3aef1d4d180f920384aa203cd0a70be7adb986ad3ca865</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e3d5118b-4e31-4595-aff4-6c97e65b8260" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">a9281030a660022caa37f4659019118f881ea7d1</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="69621d49-a53e-4541-84c8-b70a9839e2e4">
+                <IndicatorItem id="d82d1a2b-72c6-44c9-9af4-ea49d2aa041c" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">usbclnt</Content>
+                </IndicatorItem>
+                <IndicatorItem id="cb25f9ce-da89-42b0-b848-368c5a86d6ae" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">980ee12a621757d2afd2946ce25abbcd</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ea140e90-a45d-4326-8332-9ef17415872b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">171c154d0b97cd5d257e234a0498079032538aa9e43e561b851e8598f8c38208</Content>
+                </IndicatorItem>
+                <IndicatorItem id="26b72c6a-3c8b-436b-8368-8c9a29df0b4b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">2fac7b0c250642117f2723c6a4510103db5dcfd3</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="ef82fb8b-ea39-44f2-b327-174d6ef46349">
+                <IndicatorItem id="55edd0e5-6495-490f-a20a-264e28b89619" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">usbsrv</Content>
+                </IndicatorItem>
+                <IndicatorItem id="4e5e3121-4ce8-4727-bcf4-305ffd535bb1" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">d79b803d3b51b79568a7fe7093070039</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e7addb14-0693-4e38-bd5a-b60505ee75b4" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">5df94400592a7f1b82c0068de4d4ea4428718f13624baf9a10254c14de5bec22</Content>
+                </IndicatorItem>
+                <IndicatorItem id="ba59cb22-088e-4dfe-97c8-8e9f0f7e4f0b" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">a46653e7b33e7863343a99e937dc00a32ed0563d</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="5c75b510-c1f4-47e3-982c-11bf4b9b3d6b">
+                <IndicatorItem id="ef6d5868-699c-4210-b41c-23351cdaaebd" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">usbsrvd</Content>
+                </IndicatorItem>
+                <IndicatorItem id="215318a5-a7b9-45c9-80ee-49fe804fa9bb" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">5b79865a3a633af465791474ca1d8005</Content>
+                </IndicatorItem>
+                <IndicatorItem id="fb124088-c186-4d2d-aa81-11a7c030a7c6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">1315928ddb7934b7849cd0925b7092de2329f158a3c027886c9e63065546cb3d</Content>
+                </IndicatorItem>
+                <IndicatorItem id="18ead9ae-3ff6-4a6e-a66a-ca78abd0d276" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">c6344835c3cdc483362a3b479481cd66c5150297</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="5b664c95-010f-48c7-88b7-0dd2124545ef">
+                <IndicatorItem id="a39fbbf4-cc07-4ccb-9ba2-03abeab336a0" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">usbsrvd-cl</Content>
+                </IndicatorItem>
+                <IndicatorItem id="b4c63306-4dd7-410d-a0c3-ace281b7f42e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">9469b306b2ab8da1945b71b713d45ae7</Content>
+                </IndicatorItem>
+                <IndicatorItem id="1f37856e-a63f-4894-8cf3-8f568a98ae4e" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">6c430547f871f946a8829c36a8c24c3b45a272fc55b898de22e3405f9c9b9936</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f769ceac-c9ca-4490-8b5f-a80a17eee4bb" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">a3b575f74556e3c1da8d172fbfdf1ee2152ba6e2</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="95941ddd-34fd-40bd-8f99-6fc8405394d9">
+                <IndicatorItem id="bd826c72-4775-4321-90ac-61a7216bd4bd" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">usbsrvd-srv</Content>
+                </IndicatorItem>
+                <IndicatorItem id="d0387ff5-6ca5-463a-83ca-6943313cda39" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">bb145900509e137f6fc06b1909d8ec2d</Content>
+                </IndicatorItem>
+                <IndicatorItem id="489dbaa4-dd15-4841-92c3-42fa568c4751" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">a501c69d9440b8a6e244001eaed72d77ca57aad46c557d1d375e05118a3f32ad</Content>
+                </IndicatorItem>
+                <IndicatorItem id="bac3106c-1281-404c-b52f-ecdc22359238" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">9dc97ebabc18a78019fca9df1c8d197219814b1b</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="91210493-0b44-4459-9ddd-92f95dffae7f">
+                <IndicatorItem id="9e9c39aa-764b-4ae7-a115-f48c398098ed" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">xsltproc-static-dbg-v</Content>
+                </IndicatorItem>
+                <IndicatorItem id="6e9ca223-6189-4660-986f-321b7ea77b83" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">baa1de3f0c01e8ae1d01acdc416ed036</Content>
+                </IndicatorItem>
+                <IndicatorItem id="f4de1194-1251-42e5-8c81-884f626be813" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">3264e84005a3fcb4a6f03b760d9cec3296b46bdb7a0966c5a4bb9b323511d544</Content>
+                </IndicatorItem>
+                <IndicatorItem id="e3897714-2663-4e09-b185-37093326713d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">0e55f392cf40d0a4ae6f08e038ac992fac0fdf69</Content>
+                </IndicatorItem>
+            </Indicator> 
+            <Indicator operator="OR" id="0a61c426-ec49-44b0-907e-295f808013f4">
+                <IndicatorItem id="c0bcba44-b072-49cc-bb9c-141458d2ead6" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/FileName" type="mir"/>
+                    <Content type="string">xsltproc-static-v</Content>
+                </IndicatorItem>
+                <IndicatorItem id="11544960-487c-48cd-aeb4-b8649f921b32" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Md5sum" type="mir"/>
+                    <Content type="md5">c21c4d24f57ce2005b427eeb50839263</Content>
+                </IndicatorItem>
+                <IndicatorItem id="8f8c5b4f-6014-4782-b4ed-2d61cd2e7e62" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha256sum" type="mir"/>
+                    <Content type="sha256">a19791f0d1a3c5926e10dfffb70352a30bb152ddcf1fb9b16dff7750e534a8e1</Content>
+                </IndicatorItem>
+                <IndicatorItem id="7a8a2116-cb17-4d47-8c4d-ec0cc751d82d" condition="contains" preserve-case="false" negate="false">
+                    <Context document="FileItem" search="FileItem/Sha1sum" type="mir"/>
+                    <Content type="sha1">c52ffec5e61cb43362fe6bd371d1b3886aa356bb</Content>
+                </IndicatorItem>
+            </Indicator> 
+        </Indicator>
+    </criteria>
+    <parameters>
+        <param ref-id="b695f835-8a3e-4a72-a66f-74b4ac90a078" id="6adbccca-af5d-4062-9e3a-6f8dce069009" name="">
+            <value type="data_list">'a.out','C','https://www.virustotal.com/en/file/a858f9a5c92f9d56a6fb60e62a3a98455ff45f5acf0eedf0079df845635964ee/analysis/','144cd75464dd5fd7f8043085c6ace32fbaca7d71','e5484c1b27218182d95f5658e3963b60','a858f9a5c92f9d56a6fb60e62a3a98455ff45f5acf0eedf0079df845635964ee'</value>
+        </param>
+        <param ref-id="b8f0bb02-f3cf-4c72-abd8-168cab1ed705" id="67805828-0686-4acd-b1b4-18afad4446dd" name="">
+            <value type="data_list">'a.out','C','https://www.virustotal.com/en/file/dae6ec4e3567cb805af50a5d4a8adee42f0f0c703eb02af948fd64a99df04e37/analysis/','ba2ac4338c8a3c39c087bee1e221655f3e0edc53','0969892f14e93d8b78a0ef4f6e69d6db','dae6ec4e3567cb805af50a5d4a8adee42f0f0c703eb02af948fd64a99df04e37'</value>
+        </param>
+        <param ref-id="446761c9-7315-46c1-8c02-8d93f72bc07e" id="d4538bb6-7521-4691-b532-691914a12e81" name="">
+            <value type="data_list">'bbproxy','C','https://www.virustotal.com/en/file/66bd82f5ac2c7d976d5ede73b3019509ae3df5d8fc54488d0014f3f41ad0a95f/analysis/','e614764d37ced91a0ac2827dc10dc8cfcf7b2de8','01d11a381b5fdadc2e685b568b7d9f16','66bd82f5ac2c7d976d5ede73b3019509ae3df5d8fc54488d0014f3f41ad0a95f'</value>
+        </param>
+        <param ref-id="33635db6-315a-4c60-9645-5f03145537e0" id="67120a9a-2868-4fa0-adb1-7ed8be726ca1" name="">
+            <value type="data_list">'bbproxy','D','','b7a53478a303f999414a74c4f82827b4156e1c13','69e69fc1e53353c23d4f04f637a96fb4','2378230b47e6b27f392466b3ebbe520557afe6623eaeaa171195d86c5483939c'</value>
+        </param>
+        <param ref-id="63f03261-8f6e-43f5-aeff-ea64ccf899c2" id="140b7437-c73f-4583-bf00-dfad402843d5" name="">
+            <value type="data_list">'bbproxy','C','https://www.virustotal.com/en/file/6662b7842108e2bb2ac2f01653180ea4fd2f36c2c464524e371229cfe9f52714/analysis/','9ce469cb98890d503e04b8cfc8bc7c53a828c6d7','0359e5d4bf9ad60d761eb965cac7a485','6662b7842108e2bb2ac2f01653180ea4fd2f36c2c464524e371229cfe9f52714'</value>
+        </param>
+        <param ref-id="86413a6c-a283-48fa-adf5-fda19e3480dc" id="37878b92-fe03-4349-bca8-8dd6b2677b2f" name="">
+            <value type="data_list">'bjam','D','','d7128ff340a2afd719ef5c57f64102dbfb4a2eae','b3934270458138fc8e73db6c80f5dd61','50046bd74109e71d93890ea68723d7ff1f7dc447198017d0265a79ce0ad27492'</value>
+        </param>
+        <param ref-id="78c00368-2de6-4e44-b619-208195ca5843" id="c6064ea4-4fa4-424d-b4a5-bf2cd8859efc" name="">
+            <value type="data_list">'CIS-oracle-1_0-linux-i686.bin','C','https://www.virustotal.com/en/file/358dacef4eee34bf393c71bbdc7322ce956e105187978edf492cdb553cc48e27/analysis/','26ae85f8a24ec7f807b237ecf01a805a55a0cfb9','f26afb45ac28e13d19e8944686652d7c','358dacef4eee34bf393c71bbdc7322ce956e105187978edf492cdb553cc48e27'</value>
+        </param>
+        <param ref-id="aaaedfe5-7ec5-44a5-8c8e-dc8d864b8f64" id="c6a419b2-e71e-451a-8585-8685e47807d8" name="">
+            <value type="data_list">'CIS-oracle-1_0-solaris-sparc.bin','C','https://www.virustotal.com/en/file/8759a2de00933711fd36dabfffd6fc2fe4d4d29761fb467636b60c164cddb44f/analysis/','6c08e2ca19ff52076f114c69d84e3b5e94579052','b3b66539b45d17743cb9a39204109fd4','8759a2de00933711fd36dabfffd6fc2fe4d4d29761fb467636b60c164cddb44f'</value>
+        </param>
+        <param ref-id="9cf04269-9e64-499a-a1d4-a76b826f0d48" id="25a43578-7562-459b-bf27-1adc34f37fba" name="">
+            <value type="data_list">'CMakeDetermineCompilerABI_C.bin','C','https://www.virustotal.com/en/file/70a6491c4cad22a50bd0f94c58d758ce49d83a687268ecfad9fa3daf79fac50c/analysis/','de58baea95314a8ac423729b789afe2a60a3bb61','5859475160117d99ef011387873d7b0f','70a6491c4cad22a50bd0f94c58d758ce49d83a687268ecfad9fa3daf79fac50c'</value>
+        </param>
+        <param ref-id="0f385f46-aae2-4913-aad6-43357dbbf34a" id="fc5994f0-f2c6-4241-b945-03f2198a2d47" name="">
+            <value type="data_list">'CMakeDetermineCompilerABI_CXX.bin','C','https://www.virustotal.com/en/file/b81a3cc3ae37c5dab0b40a58752f88d429bc5c92296ebffcefe555ea99c86c30/analysis/','6131141e64ec960e7f3d306bac83b180980f2149','bb23a38a68b79c0a3974ed5073648c1a','b81a3cc3ae37c5dab0b40a58752f88d429bc5c92296ebffcefe555ea99c86c30'</value>
+        </param>
+        <param ref-id="26e45303-0c2c-4bc7-8b0f-a119bee45443" id="a56e7546-39b8-4bb0-af13-14e0c9bd1edd" name="">
+            <value type="data_list">'core','C','https://www.virustotal.com/en/file/eb67397eb7e825addb295e32d81f45c34c1991f8c993238771f8e868d1d4e2a9/analysis/','34ac4698299c56fa484d7929150efa80fce8bdbf','adfea399c7bdeceb0a2b09a8df34d2a5','eb67397eb7e825addb295e32d81f45c34c1991f8c993238771f8e868d1d4e2a9'</value>
+        </param>
+        <param ref-id="79127220-b52c-4714-a7d2-ae04d8ef7098" id="bd85f43b-1698-4d0a-bb05-ba58716b1a11" name="">
+            <value type="data_list">'core','C','https://www.virustotal.com/en/file/c73081ac1b62e2ad3eef196727123eec6ea353f023176effa1ef89127fce62d1/analysis/','8817e872253e1df77de5d044e81b2509e82668d7','3565e1b1a624724b08d66493067eb26f','c73081ac1b62e2ad3eef196727123eec6ea353f023176effa1ef89127fce62d1'</value>
+        </param>
+        <param ref-id="00c05ceb-6934-451b-9f59-9e58fcf437ee" id="f8ce9836-4578-43ef-b952-82b770994bba" name="">
+            <value type="data_list">'core32','A','https://www.virustotal.com/en/file/1ad0024b950a45f483a6c253daea6657c1223c8a1a16479b50ff42bc73aa5856/analysis/','3f586474b757d036cc55b195cca767e84a6650a8','0a23f9108012e725a94ba934b3f6a077','1ad0024b950a45f483a6c253daea6657c1223c8a1a16479b50ff42bc73aa5856'</value>
+        </param>
+        <param ref-id="4c7c7b5a-7851-445a-85a8-83d4a99e75a1" id="fc620f20-88b7-4d94-9b56-4cfb4f331c83" name="">
+            <value type="data_list">'core32','D','','b424aff06c12a8779a6f832efc3b972298b60cdc','229d5ba7ea257839e9e4a6f1d5bdb01a','073db35a232ba83451864bd4ae9ea8cf40f2c297dc69c8f7ab0773971de6eac3'</value>
+        </param>
+        <param ref-id="5d4e25db-d2c0-4036-b4e0-740404512517" id="bf7e2ee4-a00c-45ea-b2ae-9121018a0000" name="">
+            <value type="data_list">'core32','A','https://www.virustotal.com/en/file/850f6f8e87ad6cb1ddae38241d932d610169e827020e1efe33ddfaddbdbe7a25/analysis/','36e363b8f2c9e5a73611d7ef90ea3c9a32a318b0','f6c2f32579361aa9d6fd59198df18040','850f6f8e87ad6cb1ddae38241d932d610169e827020e1efe33ddfaddbdbe7a25'</value>
+        </param>
+        <param ref-id="9142aa79-6cd1-49e8-bbba-f7c502fa83ea" id="27adebe2-f666-45df-97c5-61a56a898c6c" name="">
+            <value type="data_list">'core','C','https://www.virustotal.com/en/file/5e2401aa54a1b6ae4704a1e906491a9457f90b81cb6c9ecc47cab9f552ad083f/analysis/','46d3124b0b2e1361a2e4670aac8e007c4a92f647','2c60be899abec9726793ec5b8d43b700','5e2401aa54a1b6ae4704a1e906491a9457f90b81cb6c9ecc47cab9f552ad083f'</value>
+        </param>
+        <param ref-id="8d15c07c-f52a-4d9f-a7da-043351390293" id="ffc7d020-5749-46b5-8edc-f9b95bafdb18" name="">
+            <value type="data_list">'core64','A','https://www.virustotal.com/en/file/cd3cfd11255a87c7ed4eb93a6b44330cea03f89620bbaf2a3218abdbdf1afcc0/analysis/','f2783b17edbbf6783ca7021d85a9a3075f3e26c6','d352b07dd779ce73e835529ac5dbface','cd3cfd11255a87c7ed4eb93a6b44330cea03f89620bbaf2a3218abdbdf1afcc0'</value>
+        </param>
+        <param ref-id="67c55b70-07b2-4b96-8824-34b8f2571a49" id="a3e8f44a-61d3-4bf4-9879-937eb825859b" name="">
+            <value type="data_list">'core64','C','https://www.virustotal.com/en/file/3f312838b6d5268edd15d44a8de3b72706d0dbbf6e0b44a1fe8865ac3a00f34d/analysis/','66893e58fef9a97da4b128ff128ba0b7bae5f1fa','94dc07e93c34170205a6b3c9a63e436f','3f312838b6d5268edd15d44a8de3b72706d0dbbf6e0b44a1fe8865ac3a00f34d'</value>
+        </param>
+        <param ref-id="152b3f47-15b9-4de7-bc98-0fa536959803" id="c223575f-9678-4dfe-8351-7b8ea3a3db5d" name="">
+            <value type="data_list">'core64','D','','36e2dc024d1b93ecf25d6eaed5e2f780227037a4','8cc1795a3193e047a5cc3a0e43a0acbc','4575543e49b4df9f108e8f6b06a1e7b99e1ed6b369256111b3d40f9f2fbef490'</value>
+        </param>
+        <param ref-id="ce90d2c5-4ff2-4ff4-a5e3-021c917f5ab8" id="41480309-e5fd-415f-89dd-6f8475e3e17b" name="">
+            <value type="data_list">'core','A','https://www.virustotal.com/en/file/96fd36fdba57b8426d154ad429194ec669b6e0ca3d61ebf9b0d00cacc29b450a/analysis/','274894259da910f5e1fbaf7d50fd9a995fd6396b','09849dc10f9a20535c448a5e522835bb','96fd36fdba57b8426d154ad429194ec669b6e0ca3d61ebf9b0d00cacc29b450a'</value>
+        </param>
+        <param ref-id="65b1319f-f0d0-4093-ab9e-f2011faaaeb1" id="506df060-cb7e-474e-a249-b43cd24e1f66" name="">
+            <value type="data_list">'device','C','https://www.virustotal.com/en/file/0252a86ad1f9df2940f17dd2e2297eb1e7fb16d51b86be91cd39a7e1571ead61/analysis/','88e138c8068221f46aa5f86e0b41f3f8eab7b2cf','a37477d277d7e498c62de41797b0df1a','0252a86ad1f9df2940f17dd2e2297eb1e7fb16d51b86be91cd39a7e1571ead61'</value>
+        </param>
+        <param ref-id="5af890b6-8256-4621-a690-de3025d60080" id="9e4b0e0e-6dfa-410c-91ae-6b61f56661c9" name="">
+            <value type="data_list">'dropper','A','https://www.virustotal.com/en/file/40d7945f8c10195efb399876bd704a6021c8b89e8697fc43eb4d38b3f6bd3a05/analysis/','3a5ffad8d297d01534dc079aef2446504bf533ca','34806e3da24a838d94ccb3679ba91e79','40d7945f8c10195efb399876bd704a6021c8b89e8697fc43eb4d38b3f6bd3a05'</value>
+        </param>
+        <param ref-id="30293071-a31a-4ca6-8712-643043c2f372" id="48dcdf3b-4abf-43a0-8ecf-f2c167aca9b5" name="">
+            <value type="data_list">'eventmanager','C','https://www.virustotal.com/en/file/7a96db1f883c1f54e437cb6682364589f78e207c1aefb648c87698340fbdb48e/analysis/','688bb8093c9dc02eaa3fd024c7cf26fcd29ec403','e221c8620f8dae21f79a9b058b07dd14','7a96db1f883c1f54e437cb6682364589f78e207c1aefb648c87698340fbdb48e'</value>
+        </param>
+        <param ref-id="c1ff5a27-1fc4-4a6c-9319-f8394fc5a172" id="6101c2de-fa35-413f-8dbf-75b141a84cfe" name="">
+            <value type="data_list">'glib-genmarshal','D','','5780b2bd65942c80cf8f056732458752c1252288','c586ae1648a255e727d39bde64163601','07d3b91c92926c723e1796a0d1b9f823dbcb46ef5d62bd0f21235a42e20c3b6a'</value>
+        </param>
+        <param ref-id="27901834-ed43-4a3e-a316-0520887619f6" id="106264cb-e6a2-447b-94bc-27582b9b4b91" name="">
+            <value type="data_list">'glib-genmarshal','D','','a8437617314a41beb7833b64febf4ed480514ce5','251d81e32b710e3aae0f4faa3f76f509','3a6ff8835d66d5aa74b0b889b2f7066dfdbcb86d8a2f486177ae0d9a1b2d07ab'</value>
+        </param>
+        <param ref-id="b1afd589-3e6e-4bef-a598-e4444c5b4a3c" id="863fd924-0446-4334-a85f-a8965eeb8e7a" name="">
+            <value type="data_list">'gobject-query','D','','ce7d332c7b7ee469e7bcf06b0187913d04187817','d3d5c8633cc2c046a8648deea54a9167','aff97d9d8b6ac8942f63c006d258857c06aca19ab141cb0a264061898dfb73dd'</value>
+        </param>
+        <param ref-id="875ed2db-1454-4b33-b0d8-d6f0bde8e9a0" id="f28057ae-9f79-4636-964f-7a1a047e5fb8" name="">
+            <value type="data_list">'gobject-query','D','','a42e7bd8aee36ad4e32cce49b5ff4325db294e4f','29bfc4ec9b3dd0e49ec8647a46cd75fa','756aa91b2b4ed0e6303cd1c3553c547742063afb0e588498966bc2d5dcce5215'</value>
+        </param>
+        <param ref-id="6d8ea9c3-8458-4d87-9f6e-82dec042c32d" id="80ae676f-f06a-4993-9cab-3cff0864658b" name="">
+            <value type="data_list">'gtester','D','','582e1954768ecf63dab4b1cee852b8d41dd24944','d18d196653490e78647e5a8bc7686515','518675e2c2d8f2ebc53483893e3319efcdb86d009740f9b1a79c1c919ace38a9'</value>
+        </param>
+        <param ref-id="d3d7f5d2-8994-4c3a-89d5-b1ca1d4f9a61" id="a839a22d-ec4d-4902-afaf-985841af97f2" name="">
+            <value type="data_list">'gtester','D','','9d1ec68466443f8983feda8822b12dd35d44cf9e','5bf53959aa20f2d56875b4ea7a72f533','f535f9b4888d549887ea06aec39c086eea0bbc9262773f386696c20e1e7a73b4'</value>
+        </param>
+        <param ref-id="bce0400f-2afe-4666-9e67-24ca12a72dd7" id="468da625-c0c6-4c05-9d1f-54175bf80772" name="">
+            <value type="data_list">'hash','D','','b3aef6aec3a8f666492067e01129c7a90c8e2a14','83460ed6801d690ac0a07682fdae92bd','d27cfafb556c61ae71a408cb60098bd4e785fc06ed43138beb0521c63db29112'</value>
+        </param>
+        <param ref-id="9b52592a-4066-4c48-a1b0-520c8a4f3f1d" id="fb3f041d-e06f-4ebd-b3bd-f9688b7fdd99" name="">
+            <value type="data_list">'jam','D','','9d856a8214a0132e212cb2da7e83e725def68f1a','f1212c7fb858ea8e3738850106751727','e1df8e8c2158cf18a48e5872f9daf0d3d11a883e6fa2571bc99a0ed1f398ed7f'</value>
+        </param>
+        <param ref-id="c2edbe14-9dd1-4793-afe9-ec19794a541f" id="3a801780-7d43-4532-b270-e6be8bf3308d" name="">
+            <value type="data_list">'keygen_linux_binary','CD','https://www.virustotal.com/en/file/c6ba837c2857e6533a8150e216417c00bb6466772afb104ab80f720f6d7b864d/analysis/','9f489c15ba850271f082ecf96ec6bcba4884ac10','21122e0df14afc90e1d760962bbeb21c','c6ba837c2857e6533a8150e216417c00bb6466772afb104ab80f720f6d7b864d'</value>
+        </param>
+        <param ref-id="f5995021-baf9-4b10-a40b-a2769d085470" id="44d6b8d7-f83c-4938-8cf6-ccc87c0d3fc4" name="">
+            <value type="data_list">'keylog','C','https://www.virustotal.com/en/file/9215fc637e018d19e93e8529669289d03b72b2c1662a6f2dcdcfbf24ce7ff9bf/analysis/','2974bc369f515024ac89b6c2b51c4f60851877ed','760418af814f5f79b3fd69b2a8b52991','9215fc637e018d19e93e8529669289d03b72b2c1662a6f2dcdcfbf24ce7ff9bf'</value>
+        </param>
+        <param ref-id="484c1910-1bcb-4d36-a677-c81e44d37f5a" id="b7e54e65-f69b-45ef-88a1-a90fb6c67aab" name="">
+            <value type="data_list">'linux_server','C','https://www.virustotal.com/en/file/f408b207447dbde3a97de5d05fd3225580d6dbcf5cb3cbd03a45b07327e57ac0/analysis/','e4acb26724915b4ecad6cf5e3a45568b68d0ebc4','eabe761b88eb92f1d096a08d0ff97263','f408b207447dbde3a97de5d05fd3225580d6dbcf5cb3cbd03a45b07327e57ac0'</value>
+        </param>
+        <param ref-id="5d3a4380-8fe3-4dee-8db9-5e4e3f170832" id="11a1c288-1cc8-4265-bd91-981685883606" name="">
+            <value type="data_list">'linux_server','C','https://www.virustotal.com/en/file/a4b74c6d42d863e290ff361b0382bf19e66eb9f9ec9861d899620102814f2c29/analysis/','670b2087b9fa19c8190e0cd7d12ddf748b4fd67f','a431477b2130774572b2cbb46dd9505b','a4b74c6d42d863e290ff361b0382bf19e66eb9f9ec9861d899620102814f2c29'</value>
+        </param>
+        <param ref-id="c84eabfa-e92a-4a6f-860a-66736490f687" id="530ebc2c-5d73-4322-89fa-9890c46ff1f7" name="">
+            <value type="data_list">'main','C','https://www.virustotal.com/en/file/38907f006018614e57bca99b3bd32d4f3cc6d4ee11adbd4549523d555aeaaddb/analysis/','c3b02f2995ef3f7633a822bd32788678743a63ee','769359fb1e32a3e85347cd6efd4f0778','38907f006018614e57bca99b3bd32d4f3cc6d4ee11adbd4549523d555aeaaddb'</value>
+        </param>
+        <param ref-id="00f61c8a-0076-4517-bc0c-2c75caa0efb7" id="b3af2350-70b3-40a6-b6e1-70e3eccac769" name="">
+            <value type="data_list">'melter','C','https://www.virustotal.com/en/file/a70e9b407740c30d87bcf4495ab74816bf732d25927de50a424a15db0fceab2c/analysis/','b6729db320263dbca2cad46d59a4addc5babee1a','eda91588e6d7941410c25bb6d0a483f2','a70e9b407740c30d87bcf4495ab74816bf732d25927de50a424a15db0fceab2c'</value>
+        </param>
+        <param ref-id="5e5b46b6-c03a-485f-bcad-c33ced89cab8" id="4e17cf89-62d2-400e-aa07-ec27af2d0710" name="">
+            <value type="data_list">'obf','D','','b7b1305d0aaa74a6008f77d0b52e698760596849','70238935e39c34c8299ab5dbfc60006f','217854e1fdffe8b6917a7fa6e011fbe709837b5ccc6ab8c3323c29ffb7dfa00b'</value>
+        </param>
+        <param ref-id="270bbf21-e121-4929-ba22-29b1d648512d" id="61f6dd99-c7f7-47cc-a979-0a984123168a" name="">
+            <value type="data_list">'obf_sc','D','','bb9d94dd9dd223ea5799076535be3ef81a3f8bed','f034985cf944ac5354fa58b0a4f5d2ed','4560b4e511ea8332861d58812a122f1463e84b40ce038048bcf40539a15851fb'</value>
+        </param>
+        <param ref-id="4e9be73d-e85e-44a1-abd5-7b2cefb95905" id="3e457e7b-25bf-4d19-aba1-95771133e4a2" name="">
+            <value type="data_list">'obf_sc','D','','de88872bd5b72972f8cfcf003a00e384995376b3','b91a5318d588f292bcc17e9ddf3a1d91','a49150dfe0f147e7bbbad2deec904ff1f453809f9f0d5f8809a988abd625ff15'</value>
+        </param>
+        <param ref-id="3469a701-84dd-4c3a-bdc4-f5a8a8c7cc8a" id="727ac3b8-affd-4873-aac5-d2c99c7eb0af" name="">
+            <value type="data_list">'obf_sc','D','','c2222524079d11f0d226f66e605aa5655cf1580f','a829fb1fa5ab3406b4fa16795551bde1','c5a6f33d0fd578d6b493126b190091278ac313712328e527876ca5c412e4b5d6'</value>
+        </param>
+        <param ref-id="9326560a-3a91-45ad-ab6a-ae4cfef461f3" id="b4fdafe0-1bd8-415b-8387-a1d0a606d12f" name="">
+            <value type="data_list">'rarara','CD','https://www.virustotal.com/en/file/d6545cda5027c87a44e2a616ef993cdad1904e2eb6d061d6ef8bd485516d0da3/analysis/','d30e524f0d6ee7f9ae4fd57ab3eb5d28a2afff2a','1b4b314eafb12b1bf9e08beeaf99f4ac','d6545cda5027c87a44e2a616ef993cdad1904e2eb6d061d6ef8bd485516d0da3'</value>
+        </param>
+        <param ref-id="8b0f9a32-b2e8-4b94-ac46-2b88a534e25d" id="6526865d-6892-41d7-8a36-2f887fbb76eb" name="">
+            <value type="data_list">'rcsanon','C','https://www.virustotal.com/en/file/906e68614b03f886654c83d21fb9209113805f9a766c962535a85631ecb29945/analysis/','4bbb7aa36d10f61541384efa4ffe8af0ca15d965','54f252c1664b199384118ca4bd6a5430','906e68614b03f886654c83d21fb9209113805f9a766c962535a85631ecb29945'</value>
+        </param>
+        <param ref-id="011e2f20-9fa5-4d56-b4e1-0542282ec0a7" id="d73cfbd5-4573-4a0e-8f47-862b0a1050ba" name="">
+            <value type="data_list">'rcsanon','C','https://www.virustotal.com/en/file/1a199cc53ac508ded68c573b9acd6b646ff75623264802281bcb9f0eb6fab1d9/analysis/','47ad4c1aa171900b2bfad3f4b669de3bda053750','4c8c18b777768c29e0e461e5bafad8a9','1a199cc53ac508ded68c573b9acd6b646ff75623264802281bcb9f0eb6fab1d9'</value>
+        </param>
+        <param ref-id="84886c28-4d6f-4c54-b848-8e766b81614f" id="b4f12f44-74d2-40f8-8bac-9f9034f95a73" name="">
+            <value type="data_list">'rcsanon','C','https://www.virustotal.com/en/file/28f1ac0a1b2c6413947a742c92d3a9fe6e81d0bfcce6a686bef822943a19f253/analysis/','c640b4a1e3c85bc7b977088a40344bde3368cdec','342ea1f738cec360c7b0d61c2000095b','28f1ac0a1b2c6413947a742c92d3a9fe6e81d0bfcce6a686bef822943a19f253'</value>
+        </param>
+        <param ref-id="af8fb841-a3e8-41ee-bd77-98a025cd5236" id="8b074bcc-8e62-4428-b434-0dc99cea0df5" name="">
+            <value type="data_list">'RCSRedirect','C','https://www.virustotal.com/en/file/08348141224e6abe0a2a3433c9f266216bffb89e98a1f1bcaea05680c7be0225/analysis/','3d0e54ef7bb34ee66a1c2713e06e0e9d8d3e9bd4','d7ff8c601818dcd5f1b5c6457e36ac67','08348141224e6abe0a2a3433c9f266216bffb89e98a1f1bcaea05680c7be0225'</value>
+        </param>
+        <param ref-id="7425a8ff-72a3-49d1-8726-c8e4bf872881" id="3aba4bc8-47df-4fef-8296-05f128a55e4d" name="">
+            <value type="data_list">'smbclient','C','https://www.virustotal.com/en/file/809e52604d171c6e37ff90c8d948818f5690da1fd64c98443f04c00b25e51616/analysis/','56aa0a3fc570779c9c80f63b9a4bdac98d241b87','c8987f14c2f0e3cffe319a6e561724d6','809e52604d171c6e37ff90c8d948818f5690da1fd64c98443f04c00b25e51616'</value>
+        </param>
+        <param ref-id="4a2d4767-21c6-4f5c-80f4-cce260838223" id="dacdd811-6ee6-4e28-a4c9-a188b5b619ae" name="">
+            <value type="data_list">'sqlite','D','','ba6bb5e958020aef5d702cf6b4c18623cb36484d','257e89974ce052e6433a19d2606f384f','91d81e6580ea634b8382c6d3c58d1b14102d2cb88d2b7277cb383ac60922c911'</value>
+        </param>
+        <param ref-id="d204f6f0-42e7-4afb-9eef-330b4a76727d" id="86497426-675f-4d13-869a-b87afb4bd03e" name="">
+            <value type="data_list">'store','D','','e6793e0b2e8dbf9ae7720aafecfdfc242985f6a6','e9bae7ff01b693d22e09958e34eae648','b142218fdad7498708b2369ffa19a02f02c04f08a554b9de5ea28205c776dd51'</value>
+        </param>
+        <param ref-id="d813a11f-1d19-4071-bafd-b4dbe8a95233" id="e2c62ea1-6475-45b3-918b-4a7e9f09bc5b" name="">
+            <value type="data_list">'sudo','C','https://www.virustotal.com/en/file/379ee45ed055674122436d6eba89680bd7241f4b4d18ecf31256b683496475da/analysis/','7c08a8a10760e9ada2313e6192fc02a3691b405a','a552a79a843a5b533bd3dafd6f937574','379ee45ed055674122436d6eba89680bd7241f4b4d18ecf31256b683496475da'</value>
+        </param>
+        <param ref-id="ad450ab1-4bb6-4d35-9d12-945466619f10" id="e7269e8a-cdac-45c3-a20b-96cf122dd086" name="">
+            <value type="data_list">'sync','C','https://www.virustotal.com/en/file/42fd2064ef61aad7a41b170b46f711d336594c39b16b89d8d4c5a2caeefa2e6c/analysis/','ab41edd2dba631981537ac76fc38c16c6e34f79f','dd4b1996983c2a57e8306df2eda8ac8d','42fd2064ef61aad7a41b170b46f711d336594c39b16b89d8d4c5a2caeefa2e6c'</value>
+        </param>
+        <param ref-id="4ade538c-d05d-47b9-a76e-4d06d4c46672" id="c4b76b9a-ff99-469f-93ca-18c4e44f48e5" name="">
+            <value type="data_list">'sync','C','https://www.virustotal.com/en/file/d9f5ed16c9a7354dd6466a63688cfc22b964edacf861efc8d7b2dbf1e5604616/analysis/','9d0c576607a90c31ec6460b5a88da57cf70ea014','b3066ac8ca54a2fd80d676afb867350b','d9f5ed16c9a7354dd6466a63688cfc22b964edacf861efc8d7b2dbf1e5604616'</value>
+        </param>
+        <param ref-id="39778668-5896-4be2-8882-27fbf6ad25c4" id="ed7cbffe-ca39-46ac-b401-18c072e1c7ab" name="">
+            <value type="data_list">'test','C','https://www.virustotal.com/en/file/2fc3cfa846a4f00ecb863f4e7187d66df1583b42f6a9ce53f4ec170621ff68b7/analysis/','231af5c3bedc118070ded3c8fc7e71011b7731aa','8955fcc78b51aa449b76e850ba0ebdef','2fc3cfa846a4f00ecb863f4e7187d66df1583b42f6a9ce53f4ec170621ff68b7'</value>
+        </param>
+        <param ref-id="2ac3368f-6b80-417a-8de8-057a523a14e4" id="31900338-d356-4ccf-8328-a9b9b8e74d90" name="">
+            <value type="data_list">'test','D','','0e1ac9adef15cc5a30d9e29e27082faccf695cee','f7bdbc7380f5f5a10f8672ef4f406092','efd46d292b33426fcee24d64acc93e89d6665c393e7ba27781b2c26093205e2a'</value>
+        </param>
+        <param ref-id="0f6d7ac1-3dfe-4f8c-8cef-aba7ac6c1fb2" id="370ec67f-9b7c-4b8e-9f53-48db7250b38e" name="">
+            <value type="data_list">'test','C','https://www.virustotal.com/en/file/b1aa9efac39092ef6a2c8ad3a0b6f32e40d6d7845c980baafec84c2bea8bcc4b/analysis/','8aba54bdc76a06854be09108dc36903751bda0e7','d99c760ffa1b87801ae8ebdbcd3bfad4','b1aa9efac39092ef6a2c8ad3a0b6f32e40d6d7845c980baafec84c2bea8bcc4b'</value>
+        </param>
+        <param ref-id="488539db-6f39-49b2-bedc-c4189cbddce2" id="6796a37c-2434-4a2c-a6b4-526066d73578" name="">
+            <value type="data_list">'test','C','https://www.virustotal.com/en/file/fcffc764e194b64af52d9774c57283fbfe2d1d9a1d685260eebf0d13cae41640/analysis/','b899ad87443be6d4ecb059eb148935ccf5273df1','c88a3737497cdaf89424bf65e2c6c001','fcffc764e194b64af52d9774c57283fbfe2d1d9a1d685260eebf0d13cae41640'</value>
+        </param>
+        <param ref-id="4e9b0216-67eb-4074-bee7-b1476fb81c79" id="e37c5547-74b3-4d77-a40d-0709b4051a7e" name="">
+            <value type="data_list">'tfc','D','','403bbeacd8fc8103bf2d9d0ad6580ab58e4e83a4','6a2a94868745e6dc05b35f1040b04131','ad2156fecde2f8019f345f0248182cd41c9127e86fd50db9e1c7ed5ea433e914'</value>
+        </param>
+        <param ref-id="5936de1d-9152-48c7-8a3c-ea50808a551c" id="f4018167-1119-4927-b8ae-088ed7a4ca9a" name="">
+            <value type="data_list">'tinyproxy','C','https://www.virustotal.com/en/file/06f174c53c80c0e1218a509e58df35de675f79780ec9baad22e9ad16ef54b978/analysis/','6bf9ab34d3ea5243cf2be9996e32ba87673d9d95','81f06cae37edd53067d69a8c702132ff','06f174c53c80c0e1218a509e58df35de675f79780ec9baad22e9ad16ef54b978'</value>
+        </param>
+        <param ref-id="118c7bdb-4edc-4ac0-ac90-184122c3e29c" id="4875ef72-0be7-4caf-a5f5-0547d12aba06" name="">
+            <value type="data_list">'unwand','D','','a9281030a660022caa37f4659019118f881ea7d1','ac6b0a27f80064d017132fbef2493787','69f889fd22e35d905b3aef1d4d180f920384aa203cd0a70be7adb986ad3ca865'</value>
+        </param>
+        <param ref-id="cb25f9ce-da89-42b0-b848-368c5a86d6ae" id="4b6a127e-be9d-4f34-a243-e095dab6385d" name="">
+            <value type="data_list">'usbclnt','C','https://www.virustotal.com/en/file/171c154d0b97cd5d257e234a0498079032538aa9e43e561b851e8598f8c38208/analysis/','2fac7b0c250642117f2723c6a4510103db5dcfd3','980ee12a621757d2afd2946ce25abbcd','171c154d0b97cd5d257e234a0498079032538aa9e43e561b851e8598f8c38208'</value>
+        </param>
+        <param ref-id="4e5e3121-4ce8-4727-bcf4-305ffd535bb1" id="e5f9dbc3-7d1a-413b-a121-6151e561212b" name="">
+            <value type="data_list">'usbsrv','C','https://www.virustotal.com/en/file/5df94400592a7f1b82c0068de4d4ea4428718f13624baf9a10254c14de5bec22/analysis/','a46653e7b33e7863343a99e937dc00a32ed0563d','d79b803d3b51b79568a7fe7093070039','5df94400592a7f1b82c0068de4d4ea4428718f13624baf9a10254c14de5bec22'</value>
+        </param>
+        <param ref-id="215318a5-a7b9-45c9-80ee-49fe804fa9bb" id="cb68ec60-09ca-4daa-9b64-85a57387336b" name="">
+            <value type="data_list">'usbsrvd','C','https://www.virustotal.com/en/file/1315928ddb7934b7849cd0925b7092de2329f158a3c027886c9e63065546cb3d/analysis/','c6344835c3cdc483362a3b479481cd66c5150297','5b79865a3a633af465791474ca1d8005','1315928ddb7934b7849cd0925b7092de2329f158a3c027886c9e63065546cb3d'</value>
+        </param>
+        <param ref-id="b4c63306-4dd7-410d-a0c3-ace281b7f42e" id="53a29bba-036e-4305-b382-fc6f1ede0763" name="">
+            <value type="data_list">'usbsrvd-cl','C','https://www.virustotal.com/en/file/6c430547f871f946a8829c36a8c24c3b45a272fc55b898de22e3405f9c9b9936/analysis/','a3b575f74556e3c1da8d172fbfdf1ee2152ba6e2','9469b306b2ab8da1945b71b713d45ae7','6c430547f871f946a8829c36a8c24c3b45a272fc55b898de22e3405f9c9b9936'</value>
+        </param>
+        <param ref-id="d0387ff5-6ca5-463a-83ca-6943313cda39" id="ce5351d0-a6fa-4398-b0ab-1854bff97c7a" name="">
+            <value type="data_list">'usbsrvd-srv','C','https://www.virustotal.com/en/file/a501c69d9440b8a6e244001eaed72d77ca57aad46c557d1d375e05118a3f32ad/analysis/','9dc97ebabc18a78019fca9df1c8d197219814b1b','bb145900509e137f6fc06b1909d8ec2d','a501c69d9440b8a6e244001eaed72d77ca57aad46c557d1d375e05118a3f32ad'</value>
+        </param>
+        <param ref-id="6e9ca223-6189-4660-986f-321b7ea77b83" id="2e098bec-9fc7-4032-9a1e-e33b8a487c54" name="">
+            <value type="data_list">'xsltproc-static-dbg-v','C','https://www.virustotal.com/en/file/3264e84005a3fcb4a6f03b760d9cec3296b46bdb7a0966c5a4bb9b323511d544/analysis/','0e55f392cf40d0a4ae6f08e038ac992fac0fdf69','baa1de3f0c01e8ae1d01acdc416ed036','3264e84005a3fcb4a6f03b760d9cec3296b46bdb7a0966c5a4bb9b323511d544'</value>
+        </param>
+        <param ref-id="11544960-487c-48cd-aeb4-b8649f921b32" id="ea4cb369-243f-4695-8cd1-3957de20e71c" name="">
+            <value type="data_list">'xsltproc-static-v','C','https://www.virustotal.com/en/file/a19791f0d1a3c5926e10dfffb70352a30bb152ddcf1fb9b16dff7750e534a8e1/analysis/','c52ffec5e61cb43362fe6bd371d1b3886aa356bb','c21c4d24f57ce2005b427eeb50839263','a19791f0d1a3c5926e10dfffb70352a30bb152ddcf1fb9b16dff7750e534a8e1'</value>
+        </param>
+    </parameters>
+</OpenIOC>
