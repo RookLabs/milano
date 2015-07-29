@@ -1,3 +1,5 @@
 *.pyc
 *.swp
 last_scan_results.txt
+build/
+dist/
