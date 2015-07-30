@@ -10,9 +10,10 @@
 | Date    07/30/2015 |
 ----------------------
 - Updated/augmented IOC files, the result of completed Hacking Team leaked-project anaylysis.
-- Removed quick scan mode. Turns out it's not very comprehensive -- the responsible thing is to remove it, even if the program runs much slower using the other technique.
-- Milano now reads directly from IOCs (located under the openioc folder).
+- Updated IOC files include Mac and Linux IOCs.
+- Removed quick-scan mode. After further research, we have found deep-scan mode provides the most accurate results.
+- Milano can now utilize custom IOC files (located under the openioc folder).
+- Users are able to add their own IOCs under openioc/user-added/openioc_1.0 or openioc/user-added/openioc_1.1 (depending on the IOC file format).
 - Latest IOCs always available in the milano_iocs.tar.gz archive (in the root of the repo).
-- Fixed a bug that was preventing program completion in POSIX operating systems (related to trying to check character and block devices).
+- Bug fix that was preventing program completion in POSIX operating systems (related to trying to check character and block devices).
 - Improved report output (now reports completion time in minutes).
-- Users should be able to add their own IOCs under openioc/user-added/openioc_1.0 or openioc/user-added/openioc_1.1 (depending on the IOC file format).
