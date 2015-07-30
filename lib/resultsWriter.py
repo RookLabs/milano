@@ -20,7 +20,7 @@ class ResultsWriter(object):
 			'Files requiring review as they match Hacking Team MD5 signatures\n' + \
 			'  Category (A=Detected via VirusTotal  B=Detected via manual analysis\n' + \
 			'            C=From malicious project   D=Undetermined)\n' + \
-			'-----------------------------------------------------------------------------------\n'
+			'-------------------------------------------------------------------------------\n'
 
 		if len(results.detected_file_paths) > 0:
 			for path in results.detected_file_paths:
