@@ -35,9 +35,13 @@ EXECUTION
 ---------
 Windows
 
-    Run milano.exe as administrator.
+    Run Milano (milano.exe, under the win32 folder) as administrator.
+ 
+    Milano should be able to run under Windows 7+ without any extra effort.
 
-    Alternatively, run the command "python milano.py", if the Python 2.7 programming language is installed on your system.
+    If running under Windows XP, you may need to obtain a copy of the Microsoft C runtime DLL on your system if it's not already present. This can be done by installing the Microsoft Visual C++ 2008 Redistributable Package (x86) from here: http://www.microsoft.com/en-us/download/details.aspx?id=29
+
+    Alternatively, if you have Python 2.7 installed, you can run the command "python milano.py".
 
 Linux/OS X
 

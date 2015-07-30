@@ -9,6 +9,7 @@
 | Version 1.1.0      |
 | Date    07/30/2015 |
 ----------------------
+- Updated/augmented IOC files, the result of completed Hacking Team leaked-project anaylysis.
 - Removed quick scan mode. Turns out it's not very comprehensive -- the responsible thing is to remove it, even if the program runs much slower using the other technique.
 - Milano now reads directly from IOCs (located under the openioc folder).
 - Latest IOCs always available in the milano_iocs.tar.gz archive (in the root of the repo).
